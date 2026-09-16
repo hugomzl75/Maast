@@ -1,5 +1,5 @@
 // ---------- Page transition ----------
-const TRANSITION_MS = 850;
+const TRANSITION_MS = 380;
 
 function initPageTransition() {
   const el = document.querySelector(".page-transition");
