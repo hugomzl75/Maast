@@ -47,7 +47,7 @@ function cardHTML(p, index) {
       <img src="${projectCover(p)}" alt="${p.title}" loading="lazy">
       <span class="card-overlay">
         <span class="card-title">${p.title}</span>
-        ${p.category || p.location ? `<span class="card-meta">${[p.category, p.location].filter(Boolean).join(" — ")}</span>` : ""}
+        ${p.category ? `<span class="card-meta">${p.category}</span>` : ""}
       </span>
     </a>`;
 }
@@ -78,9 +78,8 @@ function renderProjectDetail() {
   const project = PROJECTS[idx];
   const nextProject = PROJECTS[(idx + 1) % PROJECTS.length];
 
-  document.title = `${project.title} — MAAST`;
+  document.title = `${project.title} — maast`;
 
-  const metaLine = [project.category, project.location, project.year].filter(Boolean).join(" — ");
   const photos = projectPhotos(project);
 
   container.innerHTML = `
@@ -88,8 +87,7 @@ function renderProjectDetail() {
       <a class="project-back js-transition" href="projects.html">&larr; Projets</a>
       <div class="project-index">${String(idx + 1).padStart(2, "0")} — ${String(PROJECTS.length).padStart(2, "0")}</div>
       <h1 class="project-title">${project.title}</h1>
-      ${metaLine ? `<div class="project-meta">${metaLine}</div>` : ""}
-      ${project.description ? `<p class="project-desc">${project.description}</p>` : ""}
+      ${project.category ? `<div class="project-meta">${project.category}</div>` : ""}
     </aside>
     <div class="project-photos">
       ${photos

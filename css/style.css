@@ -56,10 +56,11 @@ img { display: block; max-width: 100%; }
 }
 
 .site-header .logo {
-  font-family: 'Fraunces', serif;
-  font-size: 1.3rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
 }
 
 .site-header nav {
@@ -113,12 +114,11 @@ img { display: block; max-width: 100%; }
 
 .page-transition-mark {
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  font-size: 0.95rem;
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
   color: var(--cream);
-  padding-left: 0.5em;
   opacity: 1;
   transition: opacity 0.6s ease;
 }
@@ -180,11 +180,10 @@ img { display: block; max-width: 100%; }
 .hero-mark {
   display: inline-block;
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
-  letter-spacing: 0.6em;
-  text-transform: uppercase;
-  padding-left: 0.6em;
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
 }
 
 /* ---------- Sections ---------- */
@@ -197,46 +196,6 @@ section { padding: 120px 0; }
   text-transform: uppercase;
   color: var(--stone);
   margin-bottom: 22px;
-}
-
-.intro {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 80px;
-  align-items: start;
-}
-
-.intro h2 {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  line-height: 1.25;
-}
-
-.intro p {
-  font-size: 1.02rem;
-  line-height: 1.75;
-  color: var(--charcoal);
-  margin: 0 0 20px;
-}
-
-.stats {
-  display: flex;
-  gap: 56px;
-  margin-top: 48px;
-  padding-top: 32px;
-  border-top: 1px solid var(--line);
-}
-
-.stat .num {
-  font-family: 'Fraunces', serif;
-  font-size: 2.4rem;
-}
-
-.stat .label {
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--stone);
-  margin-top: 4px;
 }
 
 /* ---------- Featured strip on home ---------- */
@@ -344,15 +303,6 @@ section { padding: 120px 0; }
 
 .projects-hero h1 {
   font-size: clamp(2.4rem, 5vw, 4rem);
-  max-width: 18ch;
-}
-
-.projects-hero p {
-  margin-top: 22px;
-  max-width: 60ch;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--charcoal);
 }
 
 .projects-grid {
@@ -409,12 +359,6 @@ section { padding: 120px 0; }
   text-transform: uppercase;
   color: var(--stone);
   margin-bottom: 26px;
-}
-
-.project-desc {
-  font-size: 0.96rem;
-  line-height: 1.75;
-  color: var(--charcoal);
 }
 
 .project-photos {
@@ -527,10 +471,8 @@ section { padding: 120px 0; }
   .site-header { mix-blend-mode: normal; background: transparent; }
   .nav-toggle { display: block; z-index: 101; }
 
-  .intro { grid-template-columns: 1fr; gap: 40px; }
   .featured-grid, .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .featured-grid .card:first-child { grid-column: span 2; grid-row: span 1; aspect-ratio: 4/5; }
-  .stats { gap: 32px; flex-wrap: wrap; }
   .footer-top { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; gap: 10px; }
 
