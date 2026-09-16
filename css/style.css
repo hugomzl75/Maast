@@ -82,6 +82,15 @@ img { display: block; max-width: 100%; }
   border-bottom-color: currentColor;
 }
 
+.site-header--photo {
+  mix-blend-mode: normal;
+  color: var(--white);
+}
+
+.site-header--photo nav a {
+  text-shadow: 0 1px 5px rgba(0,0,0,0.55);
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -157,6 +166,12 @@ img { display: block; max-width: 100%; }
   font-weight: 500;
   font-size: clamp(1.3rem, 1.8vw, 1.7rem);
   letter-spacing: 0.02em;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s var(--ease);
+}
+
+.hero-content:hover .hero-mark {
+  border-bottom-color: currentColor;
 }
 
 /* ---------- Sections ---------- */
@@ -218,7 +233,7 @@ section { padding: 120px 0; }
 
 .featured-grid .card:first-child { aspect-ratio: 8 / 5; }
 
-.card img {
+.card-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -226,11 +241,28 @@ section { padding: 120px 0; }
   transition: transform 0.9s var(--ease), filter 0.6s ease;
 }
 
-.card:hover img { transform: scale(1.06); filter: grayscale(0%); }
+.card:hover .card-photo { transform: scale(1.06); filter: grayscale(0%); }
+
+.card-plan {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  box-sizing: border-box;
+  padding: 13%;
+  background: var(--cream);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.card:hover .card-plan { opacity: 1; }
 
 .card-overlay {
   position: absolute;
   inset: 0;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -245,6 +277,7 @@ section { padding: 120px 0; }
 
 .card-index {
   position: absolute;
+  z-index: 2;
   top: 20px;
   left: 20px;
   font-size: 0.72rem;
@@ -376,17 +409,17 @@ section { padding: 120px 0; }
 /* ---------- Footer ---------- */
 
 .site-footer {
-  background: var(--black);
-  color: var(--sand);
-  padding: 90px 0 40px;
+  background: var(--cream);
+  color: var(--charcoal);
+  padding: 70px 0 40px;
 }
 
 .footer-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  padding-bottom: 60px;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--line);
 }
 
 .footer-col-label {
@@ -401,7 +434,7 @@ section { padding: 120px 0; }
   display: block;
   font-size: 0.95rem;
   line-height: 2;
-  color: var(--sand);
+  color: var(--charcoal);
 }
 
 .footer-bottom {

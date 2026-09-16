@@ -44,7 +44,8 @@ function cardHTML(p, index) {
   return `
     <a class="card js-transition" href="project.html?p=${p.slug}" aria-label="Voir le projet ${p.title}">
       <span class="card-index">${String(index + 1).padStart(2, "0")}</span>
-      <img src="${projectCover(p)}" alt="${p.title}" loading="lazy">
+      <img class="card-photo" src="${projectCover(p)}" alt="${p.title}" loading="lazy">
+      ${p.hasPlan ? `<img class="card-plan" src="${projectPlan(p)}" alt="Plan — ${p.title}" loading="lazy">` : ""}
       <span class="card-overlay">
         <span class="card-title">${p.title}</span>
         ${p.category ? `<span class="card-meta">${p.category}</span>` : ""}
