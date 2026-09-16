@@ -1,3 +1,27 @@
+// ---------- Page transition ----------
+const TRANSITION_MS = 850;
+
+function initPageTransition() {
+  const el = document.querySelector(".page-transition");
+  if (!el) return;
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => el.classList.add("revealed"));
+  });
+
+  document.querySelectorAll("a.js-transition").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const href = a.getAttribute("href");
+      if (!href || a.target === "_blank") return;
+      e.preventDefault();
+      el.classList.remove("revealed");
+      setTimeout(() => {
+        window.location.href = href;
+      }, TRANSITION_MS);
+    });
+  });
+}
+
 // ---------- Mobile nav ----------
 function initNav() {
   const toggle = document.querySelector(".nav-toggle");
@@ -153,6 +177,7 @@ function openFromHash() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initPageTransition();
   initNav();
   renderFeatured();
   renderProjectsGrid();
