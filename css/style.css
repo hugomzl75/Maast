@@ -155,9 +155,9 @@ img { display: block; max-width: 100%; }
 .hero-content {
   position: absolute;
   z-index: 2;
-  left: 45%;
-  top: 39%;
-  transform: translate(0, -50%);
+  left: 55%;
+  top: 33%;
+  transform: translate(0, -100%);
   color: var(--white);
   opacity: 0;
   animation: hero-mark-in 1s ease 0.2s forwards;
