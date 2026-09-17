@@ -144,6 +144,12 @@ img { display: block; max-width: 100%; }
   gap: 36px;
 }
 
+@media (min-width: 901px) {
+  .site-header nav {
+    display: none;
+  }
+}
+
 .site-header nav a {
   font-size: 0.78rem;
   letter-spacing: 0.14em;
