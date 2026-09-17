@@ -246,8 +246,8 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-logo .logo-corner {
-  width: 22%;
-  height: 22%;
+  width: calc(4.96vw * 0.22);
+  height: calc(4.96vw * 0.22);
 }
 
 .hero-logo .logo-corner--tl,
@@ -260,9 +260,9 @@ img { display: block; max-width: 100%; }
 .hero-logo .logo-compact,
 .hero-logo .logo-full {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.06em;
-  font-size: 1.15vw;
+  font-size: 1.75vw;
 }
 
 .hero-logo.logo-mark:hover,
