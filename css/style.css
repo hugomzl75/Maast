@@ -228,13 +228,11 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(180deg, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.04) 55%, rgba(0,0,0,0.4) 100%);
 }
 
-.hero-content {
+.hero-logo {
   position: absolute;
   z-index: 2;
   left: 36.75%;
-  top: 35%;
-  transform: translate(0, -100%);
-  color: var(--white);
+  top: 24%;
   opacity: 0;
   animation: hero-mark-in 1s ease 0.2s forwards;
 }
@@ -242,21 +240,6 @@ img { display: block; max-width: 100%; }
 @keyframes hero-mark-in {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-.hero-mark {
-  display: inline-block;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 200;
-  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
-  letter-spacing: 0.08em;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s var(--ease);
-  white-space: nowrap;
-}
-
-.hero-content:hover .hero-mark {
-  border-bottom-color: currentColor;
 }
 
 /* ---------- Sections ---------- */
@@ -534,12 +517,10 @@ body.hover-etudes .project-tile[data-group="equipements"] {
   .footer-top { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; gap: 10px; }
 
-  .hero-content {
+  .hero-logo {
     left: 22px;
     top: 64px;
-    transform: none;
   }
-  .hero-mark { font-size: 1.8rem; }
 
   .project-layout { flex-direction: column; padding-top: 90px; }
   .project-sidebar {
