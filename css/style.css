@@ -229,13 +229,12 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-logo {
-  --size: clamp(100px, 10vw, 148px);
   position: absolute;
   z-index: 2;
-  left: 36.75%;
-  top: 19%;
-  width: var(--size);
-  height: var(--size);
+  left: 37.42%;
+  top: calc(38vh - 7.415vw);
+  width: 4.96vw;
+  height: 4.96vw;
   background: transparent;
   color: var(--white);
   opacity: 0;
@@ -243,32 +242,32 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-logo .logo-frame--solid {
-  border-width: calc(var(--size) * 0.038);
+  border-width: 1.8px;
 }
 
 .hero-logo .logo-corner {
-  width: calc(var(--size) * 0.22);
-  height: calc(var(--size) * 0.22);
+  width: 22%;
+  height: 22%;
 }
 
 .hero-logo .logo-corner--tl,
 .hero-logo .logo-corner--tr,
 .hero-logo .logo-corner--bl,
 .hero-logo .logo-corner--br {
-  border-width: calc(var(--size) * 0.038);
+  border-width: 1.8px;
 }
 
 .hero-logo .logo-compact,
 .hero-logo .logo-full {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 200;
-  letter-spacing: 0.08em;
-  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+  letter-spacing: 0.06em;
+  font-size: 1.15vw;
 }
 
 .hero-logo.logo-mark:hover,
 .hero-logo.is-tapped {
-  width: clamp(260px, 27vw, 400px);
+  width: 15.87vw;
 }
 
 .hero-logo.is-tapped .logo-frame--solid { opacity: 0; }
@@ -559,6 +558,31 @@ body.hover-etudes .project-tile[data-group="equipements"] {
   .hero-logo {
     left: 22px;
     top: 64px;
+    width: clamp(48px, 12vw, 76px);
+    height: clamp(48px, 12vw, 76px);
+  }
+
+  .hero-logo .logo-frame--solid,
+  .hero-logo .logo-corner--tl,
+  .hero-logo .logo-corner--tr,
+  .hero-logo .logo-corner--bl,
+  .hero-logo .logo-corner--br {
+    border-width: 1.5px;
+  }
+
+  .hero-logo .logo-corner {
+    width: 22%;
+    height: 22%;
+  }
+
+  .hero-logo .logo-compact,
+  .hero-logo .logo-full {
+    font-size: 0.92rem;
+  }
+
+  .hero-logo.logo-mark:hover,
+  .hero-logo.is-tapped {
+    width: clamp(154px, 38vw, 243px);
   }
 
   .project-layout { flex-direction: column; padding-top: 90px; }
