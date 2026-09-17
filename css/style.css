@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
 :root {
   --black: #161513;
@@ -51,16 +51,90 @@ img { display: block; max-width: 100%; }
   align-items: center;
   justify-content: space-between;
   padding: 28px 40px;
-  mix-blend-mode: difference;
-  color: var(--white);
+  color: var(--black);
 }
 
-.site-header .logo {
-  font-family: 'IBM Plex Mono', monospace;
+.logo-mark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--black);
+  transition: width 0.45s var(--ease);
+}
+
+.logo-frame {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.logo-frame--solid {
+  border: 1.5px solid currentColor;
+  transition: opacity 0.25s ease;
+}
+
+.logo-frame--corners {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.15s;
+}
+
+.logo-mark:hover .logo-frame--solid {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.logo-mark:hover .logo-frame--corners {
+  opacity: 1;
+}
+
+.logo-corner {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+}
+
+.logo-corner--tl { top: -1.5px; left: -1.5px; border-top: 1.5px solid currentColor; border-left: 1.5px solid currentColor; }
+.logo-corner--tr { top: -1.5px; right: -1.5px; border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor; }
+.logo-corner--bl { bottom: -1.5px; left: -1.5px; border-bottom: 1.5px solid currentColor; border-left: 1.5px solid currentColor; }
+.logo-corner--br { bottom: -1.5px; right: -1.5px; border-bottom: 1.5px solid currentColor; border-right: 1.5px solid currentColor; }
+
+.logo-compact,
+.logo-full {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 500;
-  font-size: 1.4rem;
-  letter-spacing: 0.01em;
-  text-transform: lowercase;
+  transition: opacity 0.2s ease;
+}
+
+.logo-compact {
+  font-size: 0.92rem;
+  opacity: 1;
+}
+
+.logo-full {
+  font-size: 0.98rem;
+  opacity: 0;
+  transition-delay: 0.18s;
+}
+
+.logo-mark:hover {
+  width: 128px;
+}
+
+.logo-mark:hover .logo-compact {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.logo-mark:hover .logo-full {
+  opacity: 1;
 }
 
 .site-header nav {
@@ -156,7 +230,8 @@ img { display: block; max-width: 100%; }
   position: absolute;
   z-index: 2;
   left: 35.4%;
-  top: 7%;
+  top: 15.7%;
+  transform: translate(0, -100%);
   color: var(--black);
   opacity: 0;
   animation: hero-mark-in 1s ease 0.2s forwards;
@@ -169,10 +244,10 @@ img { display: block; max-width: 100%; }
 
 .hero-mark {
   display: inline-block;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 500;
   font-size: clamp(2.4rem, 4.4vw, 3.8rem);
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s var(--ease);
   white-space: nowrap;
@@ -432,7 +507,6 @@ body.hover-etudes .project-tile[data-group="equipements"] {
 @media (max-width: 900px) {
   .wrap { padding: 0 22px; }
   .site-header { padding: 22px; }
-  .site-header .logo { color: var(--black); }
   .site-header nav {
     position: fixed;
     top: 74px; right: 22px;
@@ -470,6 +544,7 @@ body.hover-etudes .project-tile[data-group="equipements"] {
   .hero-content {
     left: 22px;
     top: 64px;
+    transform: none;
   }
   .hero-mark { font-size: 1.8rem; }
 
