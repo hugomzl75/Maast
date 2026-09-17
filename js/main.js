@@ -42,13 +42,12 @@ function initNav() {
 // ---------- Card markup ----------
 function cardHTML(p, index) {
   return `
-    <a class="card js-transition" href="project.html?p=${p.slug}" aria-label="Voir le projet ${p.title}">
+    <a class="card js-transition" data-group="${p.group}" href="project.html?p=${p.slug}" aria-label="Voir le projet ${p.title}">
       <span class="card-index">${String(index + 1).padStart(2, "0")}</span>
       <img class="card-photo" src="${projectCover(p)}" alt="${p.title}" loading="lazy">
       ${p.hasPlan ? `<img class="card-plan" src="${projectPlan(p)}" alt="Plan — ${p.title}" loading="lazy">` : ""}
       <span class="card-overlay">
         <span class="card-title">${p.title}</span>
-        ${p.category ? `<span class="card-meta">${p.category}</span>` : ""}
       </span>
     </a>`;
 }
@@ -61,11 +60,27 @@ function renderFeatured() {
   el.innerHTML = picks.map((p, i) => cardHTML(p, i)).join("");
 }
 
-// ---------- Projects page: full grid ----------
+// ---------- Projects page: grid grouped by category ----------
 function renderProjectsGrid() {
-  const el = document.querySelector("#projects-grid");
+  const el = document.querySelector("#projects-groups");
   if (!el) return;
-  el.innerHTML = PROJECTS.map((p, i) => cardHTML(p, i)).join("");
+
+  el.innerHTML = CATEGORIES.map((cat) => {
+    const items = PROJECTS.filter((p) => p.group === cat.key);
+    return `
+      <section class="project-group">
+        <h2 class="category-label" data-group="${cat.key}">${cat.label}</h2>
+        <div class="projects-grid">
+          ${items.map((p, i) => cardHTML(p, i)).join("")}
+        </div>
+      </section>`;
+  }).join("");
+
+  document.querySelectorAll(".category-label").forEach((label) => {
+    const group = label.dataset.group;
+    label.addEventListener("mouseenter", () => document.body.classList.add(`hover-${group}`));
+    label.addEventListener("mouseleave", () => document.body.classList.remove(`hover-${group}`));
+  });
 }
 
 // ---------- Project detail page ----------
@@ -79,7 +94,7 @@ function renderProjectDetail() {
   const project = PROJECTS[idx];
   const nextProject = PROJECTS[(idx + 1) % PROJECTS.length];
 
-  document.title = `${project.title} — maast`;
+  document.title = `${project.title} — maast.a`;
 
   const photos = projectPhotos(project);
 
@@ -88,7 +103,6 @@ function renderProjectDetail() {
       <a class="project-back js-transition" href="projects.html">&larr; Projets</a>
       <div class="project-index">${String(idx + 1).padStart(2, "0")} — ${String(PROJECTS.length).padStart(2, "0")}</div>
       <h1 class="project-title">${project.title}</h1>
-      ${project.category ? `<div class="project-meta">${project.category}</div>` : ""}
     </aside>
     <div class="project-photos">
       ${photos
