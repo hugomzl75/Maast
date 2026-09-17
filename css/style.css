@@ -229,13 +229,58 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-logo {
+  --size: clamp(48px, 4.4vw, 76px);
   position: absolute;
   z-index: 2;
   left: 36.75%;
-  top: 24%;
+  top: 18%;
+  width: var(--size);
+  height: var(--size);
+  background: transparent;
+  color: var(--white);
   opacity: 0;
   animation: hero-mark-in 1s ease 0.2s forwards;
 }
+
+.hero-logo .logo-frame--solid {
+  border-width: calc(var(--size) * 0.038);
+}
+
+.hero-logo .logo-corner {
+  width: calc(var(--size) * 0.22);
+  height: calc(var(--size) * 0.22);
+}
+
+.hero-logo .logo-corner--tl,
+.hero-logo .logo-corner--tr,
+.hero-logo .logo-corner--bl,
+.hero-logo .logo-corner--br {
+  border-width: calc(var(--size) * 0.038);
+}
+
+.hero-logo .logo-compact,
+.hero-logo .logo-full {
+  font-weight: 200;
+  letter-spacing: 0.08em;
+}
+
+.hero-logo .logo-compact {
+  font-size: calc(var(--size) * 0.37);
+}
+
+.hero-logo .logo-full {
+  font-size: calc(var(--size) * 0.39);
+}
+
+.hero-logo.logo-mark:hover,
+.hero-logo.is-tapped {
+  width: calc(var(--size) * 3.2);
+}
+
+.hero-logo.is-tapped .logo-frame--solid { opacity: 0; }
+.hero-logo.is-tapped .logo-frame--corners { opacity: 1; }
+.hero-logo.is-tapped .logo-compact { opacity: 0; }
+.hero-logo.is-tapped .logo-full { opacity: 1; }
 
 @keyframes hero-mark-in {
   from { opacity: 0; }

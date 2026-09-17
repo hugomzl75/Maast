@@ -22,6 +22,36 @@ function initPageTransition() {
   });
 }
 
+// ---------- Hero logo (accueil) ----------
+function initHeroLogo() {
+  const logo = document.querySelector(".hero-logo");
+  if (!logo) return;
+  const overlay = document.querySelector(".page-transition");
+  const canHover = window.matchMedia("(hover: hover)").matches;
+
+  logo.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = logo.getAttribute("href");
+    const go = () => {
+      if (overlay) {
+        overlay.classList.remove("revealed");
+        setTimeout(() => {
+          window.location.href = href;
+        }, TRANSITION_MS);
+      } else {
+        window.location.href = href;
+      }
+    };
+    if (canHover) {
+      go();
+    } else {
+      if (logo.classList.contains("is-tapped")) return;
+      logo.classList.add("is-tapped");
+      setTimeout(go, 2000);
+    }
+  });
+}
+
 // ---------- Mobile nav ----------
 function initNav() {
   const toggle = document.querySelector(".nav-toggle");
@@ -112,6 +142,7 @@ function renderProjectDetail() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initNav();
+  initHeroLogo();
   renderProjectsGrid();
   renderProjectDetail();
   initPageTransition();
