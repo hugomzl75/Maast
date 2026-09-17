@@ -155,10 +155,9 @@ img { display: block; max-width: 100%; }
 .hero-content {
   position: absolute;
   z-index: 2;
-  left: 36.8%;
-  top: 27%;
-  transform: translate(0, -100%);
-  color: var(--white);
+  left: 35.4%;
+  top: 7%;
+  color: var(--black);
   opacity: 0;
   animation: hero-mark-in 1s ease 0.2s forwards;
 }
@@ -365,7 +364,6 @@ body.hover-etudes .project-tile[data-group="equipements"] {
 .project-photo img {
   width: 100%;
   display: block;
-  filter: grayscale(100%);
 }
 
 .project-next {
@@ -470,12 +468,10 @@ body.hover-etudes .project-tile[data-group="equipements"] {
   .footer-bottom { flex-direction: column; gap: 10px; }
 
   .hero-content {
-    left: 24px;
-    top: auto;
-    bottom: 36px;
-    transform: none;
+    left: 22px;
+    top: 64px;
   }
-  .hero-mark { font-size: 1.6rem; }
+  .hero-mark { font-size: 1.8rem; }
 
   .project-layout { flex-direction: column; padding-top: 90px; }
   .project-sidebar {
