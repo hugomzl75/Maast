@@ -351,7 +351,7 @@ section { padding: 120px 0; }
 }
 
 .category-label {
-  display: inline-block;
+  display: block;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.74rem;
   font-weight: 500;
