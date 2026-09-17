@@ -40,11 +40,10 @@ function initNav() {
 }
 
 // ---------- Card markup ----------
-function cardHTML(p, index) {
+function cardHTML(p) {
   return `
     <a class="project-tile js-transition" data-group="${p.group}" href="project.html?p=${p.slug}" aria-label="Voir le projet ${p.title}">
       <span class="tile-frame">
-        <span class="tile-index">${String(index + 1).padStart(2, "0")}</span>
         <img class="tile-photo" src="${projectCover(p)}" alt="${p.title}" loading="lazy">
       </span>
       <span class="tile-caption">${p.title}</span>
@@ -62,7 +61,7 @@ function renderProjectsGrid() {
       <section class="project-group">
         <h2 class="category-label" data-group="${cat.key}">${cat.label}</h2>
         <div class="projects-grid">
-          ${items.map((p, i) => cardHTML(p, i)).join("")}
+          ${items.map((p) => cardHTML(p)).join("")}
         </div>
       </section>`;
   }).join("");
@@ -92,7 +91,6 @@ function renderProjectDetail() {
   container.innerHTML = `
     <aside class="project-sidebar">
       <a class="project-back js-transition" href="projects.html">&larr; Projets</a>
-      <div class="project-index">${String(idx + 1).padStart(2, "0")} — ${String(PROJECTS.length).padStart(2, "0")}</div>
       <h1 class="project-title">${project.title}</h1>
     </aside>
     <div class="project-photos">
