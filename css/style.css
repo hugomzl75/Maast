@@ -229,11 +229,11 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-logo {
-  --size: clamp(48px, 4.4vw, 76px);
+  --size: clamp(100px, 10vw, 148px);
   position: absolute;
   z-index: 2;
   left: 36.75%;
-  top: 18%;
+  top: 19%;
   width: var(--size);
   height: var(--size);
   background: transparent;
@@ -260,21 +260,15 @@ img { display: block; max-width: 100%; }
 
 .hero-logo .logo-compact,
 .hero-logo .logo-full {
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 200;
   letter-spacing: 0.08em;
-}
-
-.hero-logo .logo-compact {
-  font-size: calc(var(--size) * 0.37);
-}
-
-.hero-logo .logo-full {
-  font-size: calc(var(--size) * 0.39);
+  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
 }
 
 .hero-logo.logo-mark:hover,
 .hero-logo.is-tapped {
-  width: calc(var(--size) * 3.2);
+  width: clamp(260px, 27vw, 400px);
 }
 
 .hero-logo.is-tapped .logo-frame--solid { opacity: 0; }

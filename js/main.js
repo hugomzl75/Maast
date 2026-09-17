@@ -47,7 +47,7 @@ function initHeroLogo() {
     } else {
       if (logo.classList.contains("is-tapped")) return;
       logo.classList.add("is-tapped");
-      setTimeout(go, 2000);
+      setTimeout(go, 1000);
     }
   });
 }
