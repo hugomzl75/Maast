@@ -241,7 +241,7 @@ img { display: block; max-width: 100%; }
   height: 100%;
   width: max-content;
   filter: grayscale(100%);
-  animation: hero-sky-scroll 90s linear infinite;
+  animation: hero-sky-scroll 60s linear infinite;
 }
 
 .hero-sky-img {
@@ -270,7 +270,7 @@ img { display: block; max-width: 100%; }
 .hero-content {
   position: absolute;
   z-index: 2;
-  left: 35.4%;
+  left: 37.63%;
   top: 35%;
   transform: translate(0, -100%);
   color: var(--white);
