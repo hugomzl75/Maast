@@ -267,7 +267,7 @@ img { display: block; max-width: 100%; }
 
 .hero-logo.logo-mark:hover,
 .hero-logo.is-tapped {
-  width: 15.87vw;
+  width: 16.67vw;
 }
 
 .hero-logo.is-tapped .logo-frame--solid { opacity: 0; }
@@ -571,8 +571,8 @@ body.hover-etudes .project-tile[data-group="equipements"] {
   }
 
   .hero-logo .logo-corner {
-    width: 22%;
-    height: 22%;
+    width: calc(clamp(48px, 12vw, 76px) * 0.22);
+    height: calc(clamp(48px, 12vw, 76px) * 0.22);
   }
 
   .hero-logo .logo-compact,
