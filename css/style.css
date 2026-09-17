@@ -221,6 +221,45 @@ img { display: block; max-width: 100%; }
   filter: grayscale(100%);
 }
 
+.hero-sky {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: url('assets/hero-sky-mask.png');
+  mask-image: url('assets/hero-sky-mask.png');
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: center 38%;
+  mask-position: center 38%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.hero-sky-track {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  filter: grayscale(100%);
+  animation: hero-sky-scroll 90s linear infinite;
+}
+
+.hero-sky-img {
+  display: block;
+  flex: none;
+  height: 100%;
+  width: auto;
+}
+
+@keyframes hero-sky-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-sky-track { animation: none; }
+}
+
 .hero::after {
   content: "";
   position: absolute;

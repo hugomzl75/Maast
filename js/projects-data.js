@@ -1,7 +1,7 @@
 const CATEGORIES = [
-  { key: "logements", label: "Logements" },
+  { key: "logements", label: "Logements collectifs" },
   { key: "equipements", label: "Programmes mixtes & équipements" },
-  { key: "etudes", label: "Études" },
+  { key: "etudes", label: "Études & concours" },
 ];
 
 const PROJECTS = [
