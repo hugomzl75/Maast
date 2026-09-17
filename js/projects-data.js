@@ -1,37 +1,35 @@
 const CATEGORIES = [
   { key: "logements", label: "Logements" },
   { key: "equipements", label: "Programmes mixtes & équipements" },
+  { key: "etudes", label: "Études" },
 ];
 
 const PROJECTS = [
   // Logements
-  { slug: "amiens",         title: "Claudel",        group: "logements",   photoCount: 7, hasPlan: true },
-  { slug: "poyenne",        title: "Poyenne",        group: "logements",   photoCount: 6, hasPlan: false },
-  { slug: "reginaldo",      title: "Reginaldo",      group: "logements",   photoCount: 6, hasPlan: false },
-  { slug: "poissonniers",   title: "Poissonniers",   group: "logements",   photoCount: 7, hasPlan: true },
-  { slug: "beranger",       title: "Béranger",       group: "logements",   photoCount: 6, hasPlan: false },
-  { slug: "crouy",          title: "Crouy",          group: "logements",   photoCount: 7, hasPlan: true },
-  { slug: "maroc",          title: "Maroc",          group: "logements",   photoCount: 7, hasPlan: true },
+  { slug: "amiens",         title: "Claudel",        group: "logements",   photoCount: 7 },
+  { slug: "poyenne",        title: "Poyenne",        group: "logements",   photoCount: 6 },
+  { slug: "reginaldo",      title: "Reginaldo",      group: "logements",   photoCount: 6 },
+  { slug: "poissonniers",   title: "Poissonniers",   group: "logements",   photoCount: 7 },
+  { slug: "beranger",       title: "Béranger",       group: "logements",   photoCount: 6 },
+  { slug: "crouy",          title: "Crouy",          group: "logements",   photoCount: 7 },
+  { slug: "maroc",          title: "Maroc",          group: "logements",   photoCount: 7 },
   // Programmes mixtes & équipements
-  { slug: "opera-bastille", title: "Bastille",       group: "equipements", photoCount: 7, hasPlan: true },
-  { slug: "rueil",          title: "Rueil",          group: "equipements", photoCount: 7, hasPlan: true },
-  { slug: "vaucouleurs",    title: "Vaucouleurs",    group: "equipements", photoCount: 6, hasPlan: true },
-  { slug: "massy",          title: "Massy",          group: "equipements", photoCount: 6, hasPlan: false },
-  { slug: "jean-jaures",    title: "Jean-Jaurès",    group: "equipements", photoCount: 7, hasPlan: true },
-  { slug: "guebwiller",     title: "Guebwiller",     group: "equipements", photoCount: 7, hasPlan: true },
-  { slug: "zcb",            title: "ZCB",            group: "equipements", photoCount: 7, hasPlan: true },
-  { slug: "albert-thomas",  title: "Albert Thomas",  group: "equipements", photoCount: 7, hasPlan: true },
-  { slug: "jean-viollet",   title: "Jean Viollet",   group: "equipements", photoCount: 5, hasPlan: false },
-  { slug: "prony",          title: "Prony",          group: "equipements", photoCount: 5, hasPlan: false },
-  { slug: "snecma",         title: "Snecma",         group: "equipements", photoCount: 5, hasPlan: false },
+  { slug: "vaucouleurs",    title: "Vaucouleurs",    group: "equipements", photoCount: 6 },
+  { slug: "massy",          title: "Massy",          group: "equipements", photoCount: 6 },
+  { slug: "jean-jaures",    title: "Jean-Jaurès",    group: "equipements", photoCount: 7 },
+  { slug: "guebwiller",     title: "Guebwiller",     group: "equipements", photoCount: 7 },
+  { slug: "zcb",            title: "ZCB",            group: "equipements", photoCount: 7 },
+  { slug: "albert-thomas",  title: "Albert Thomas",  group: "equipements", photoCount: 7 },
+  { slug: "jean-viollet",   title: "Jean Viollet",   group: "equipements", photoCount: 5 },
+  { slug: "prony",          title: "Prony",          group: "equipements", photoCount: 5 },
+  { slug: "snecma",         title: "Snecma",         group: "equipements", photoCount: 5 },
+  // Études
+  { slug: "opera-bastille", title: "Bastille",       group: "etudes",      photoCount: 7 },
+  { slug: "rueil",          title: "Rueil",          group: "etudes",      photoCount: 7 },
 ];
 
 function projectCover(p) {
   return `assets/projects/${p.slug}/01-thumb.jpg`;
-}
-
-function projectPlan(p) {
-  return `assets/projects/${p.slug}/${String(p.photoCount).padStart(2, "0")}-thumb.jpg`;
 }
 
 function projectPhotos(p) {

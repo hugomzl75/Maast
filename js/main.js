@@ -42,22 +42,13 @@ function initNav() {
 // ---------- Card markup ----------
 function cardHTML(p, index) {
   return `
-    <a class="card js-transition" data-group="${p.group}" href="project.html?p=${p.slug}" aria-label="Voir le projet ${p.title}">
-      <span class="card-index">${String(index + 1).padStart(2, "0")}</span>
-      <img class="card-photo" src="${projectCover(p)}" alt="${p.title}" loading="lazy">
-      ${p.hasPlan ? `<img class="card-plan" src="${projectPlan(p)}" alt="Plan — ${p.title}" loading="lazy">` : ""}
-      <span class="card-overlay">
-        <span class="card-title">${p.title}</span>
+    <a class="project-tile js-transition" data-group="${p.group}" href="project.html?p=${p.slug}" aria-label="Voir le projet ${p.title}">
+      <span class="tile-frame">
+        <span class="tile-index">${String(index + 1).padStart(2, "0")}</span>
+        <img class="tile-photo" src="${projectCover(p)}" alt="${p.title}" loading="lazy">
       </span>
+      <span class="tile-caption">${p.title}</span>
     </a>`;
-}
-
-// ---------- Home: featured strip ----------
-function renderFeatured() {
-  const el = document.querySelector("#featured-grid");
-  if (!el) return;
-  const picks = PROJECTS.slice(0, 3);
-  el.innerHTML = picks.map((p, i) => cardHTML(p, i)).join("");
 }
 
 // ---------- Projects page: grid grouped by category ----------
@@ -123,7 +114,6 @@ function renderProjectDetail() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initNav();
-  renderFeatured();
   renderProjectsGrid();
   renderProjectDetail();
   initPageTransition();
