@@ -359,7 +359,6 @@ section { padding: 120px 0; }
   text-transform: uppercase;
   color: var(--charcoal);
   margin: 0 0 8px;
-  padding-bottom: 4px;
   border-bottom: 1px solid transparent;
   cursor: default;
   transition: border-color 0.3s ease, color 0.3s ease;
