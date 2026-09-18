@@ -564,7 +564,6 @@ body.hover-etudes .project-tile[data-group="equipements"] {
   }
   .site-header nav a { color: var(--black); }
   .site-header { mix-blend-mode: normal; background: transparent; }
-  .nav-toggle { display: block; z-index: 101; }
 
   .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
   .footer-top { grid-template-columns: 1fr; gap: 36px; }
