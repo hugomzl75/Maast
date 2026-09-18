@@ -246,7 +246,7 @@ img { display: block; max-width: 100%; }
   position: absolute;
   z-index: 2;
   left: 37.42%;
-  top: calc(40vh - 7.415vw);
+  top: calc(39vh - 7.415vw);
   width: 4.96vw;
   height: 4.96vw;
   background: transparent;
