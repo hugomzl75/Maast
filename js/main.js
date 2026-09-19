@@ -22,6 +22,31 @@ function initPageTransition() {
   });
 }
 
+// ---------- Hero sky video (accueil) ----------
+function initHeroVideo() {
+  const video = document.querySelector(".hero-sky-video");
+  if (!video) return;
+
+  const tryPlay = () => {
+    const p = video.play();
+    if (p && p.catch) p.catch(() => {});
+  };
+
+  tryPlay();
+
+  if (video.paused) {
+    const resume = () => {
+      tryPlay();
+      window.removeEventListener("touchstart", resume);
+      window.removeEventListener("scroll", resume);
+      window.removeEventListener("click", resume);
+    };
+    window.addEventListener("touchstart", resume, { once: true, passive: true });
+    window.addEventListener("scroll", resume, { once: true, passive: true });
+    window.addEventListener("click", resume, { once: true });
+  }
+}
+
 // ---------- Hero logo (accueil) ----------
 function initHeroLogo() {
   const logo = document.querySelector(".hero-logo");
@@ -142,6 +167,7 @@ function renderProjectDetail() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initNav();
+  initHeroVideo();
   initHeroLogo();
   renderProjectsGrid();
   renderProjectDetail();
