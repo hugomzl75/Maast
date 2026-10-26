@@ -4,7 +4,7 @@ const CATEGORIES = [
   { key: "etudes", label: "Études & concours" },
 ];
 
-const MANDATAIRE = "maast architecture — Isabelle Manescau & François Marzelle";
+const MANDATAIRE = "maast.a";
 
 const PROJECTS = [
   // Logements
@@ -20,7 +20,7 @@ const PROJECTS = [
     slug: "poyenne", title: "103 studios | ADOMA | Bordeaux", group: "logements", photoCount: 6,
     description: {
       programme: "Restructuration en 102 studios équipés, lauréate du Prix de la Première Œuvre du Moniteur pour la réalisation de 102 chambres en 21 unités de vie.",
-      mandataire: "maast architecture",
+      mandataire: "maast.a",
     },
   },
   {
@@ -68,14 +68,14 @@ const PROJECTS = [
     slug: "vaucouleurs", title: "152 logements + commerces | Paris Habitat | Paris 11", group: "equipements", photoCount: 6,
     description: {
       programme: "Opération de réhabilitation de logements rues de Vaucouleurs, de la Fontaine aux Rois, de l'Orillon et du Moulin Joly.",
-      mandataire: "maast architecture",
+      mandataire: "maast.a",
     },
   },
   {
     slug: "massy", title: "53 logements + crèche | Générale de Promotion | Massy", group: "equipements", photoCount: 6,
     description: {
       programme: "Opération de logements en accession et d'une crèche, rue Emile Baudot à Massy.",
-      mandataire: "maast architecture",
+      mandataire: "maast.a",
     },
   },
   {
@@ -133,7 +133,7 @@ const PROJECTS = [
     slug: "rueil", title: "Espace cinématographique | Groupe SOPIC | Rueil Malmaison", group: "etudes", photoCount: 7,
     description: {
       programme: "Inventons la Métropole du Grand Paris « La Lanterne » — construction d'un espace cinématographique, d'une halle gourmande, de salles de sport et d'une terrasse agricole. Concours en 2017.",
-      mandataire: "maast architecture",
+      mandataire: "maast.a",
     },
   },
 ];
