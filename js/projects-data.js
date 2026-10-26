@@ -42,7 +42,11 @@ const PROJECTS = [
     },
   },
   {
-    slug: "poissonniers", title: "6 logements sociaux | RIVP | Paris 18", group: "logements", photoCount: 5, plan: true,
+    slug: "poissonniers", title: "6 logements sociaux | RIVP | Paris 18", group: "logements", photoCount: 5,
+    plans: [
+      { file: "plan.jpg", label: "Plan masse" },
+      { file: "plan2.jpg", label: "Coupe" },
+    ],
     description: {
       lieu: "36 rue des Poissonniers, Paris 18e",
       moe: MANDATAIRE,
@@ -54,7 +58,11 @@ const PROJECTS = [
     },
   },
   {
-    slug: "beranger", title: "53 logements | ADOMA | Paris 3", group: "logements", photoCount: 6, plan: true,
+    slug: "beranger", title: "53 logements | ADOMA | Paris 3", group: "logements", photoCount: 6,
+    plans: [
+      { file: "plan2.jpg", label: "Plan RDC" },
+      { file: "plan.jpg", label: "Plan R+1" },
+    ],
     description: {
       lieu: "22 rue Béranger, Paris 3e",
       moe: MANDATAIRE,
@@ -78,7 +86,11 @@ const PROJECTS = [
     },
   },
   {
-    slug: "maroc", title: "46 logements sociaux | Paris Habitat | Paris 19", group: "logements", photoCount: 4, plan: true,
+    slug: "maroc", title: "46 logements sociaux | Paris Habitat | Paris 19", group: "logements", photoCount: 4,
+    plans: [
+      { file: "plan.jpg", label: "Plan masse" },
+      { file: "plan2.jpg", label: "Coupe transversale" },
+    ],
     description: {
       lieu: "14/16 rue du Maroc, Paris 19e",
       moe: MANDATAIRE,
@@ -122,9 +134,19 @@ const PROJECTS = [
       contexte: "Le site proposé par Nexity est au cœur de Clichy-la-Garenne, proche des équipements et du métro, dans un tissu de faubourg hétéroclite offrant en bon voisinage : pavillons, petits logements collectifs, commerces de proximité et bâtiments industriels de bonne facture.",
     },
   },
-  { slug: "guebwiller", title: "EHPAD de 120 lits | HCC | Guebwiller", group: "equipements", photoCount: 5, plan: true },
   {
-    slug: "zcb", title: "107 logements locatifs intermédiaires + commerces | SNI | Paris 17", group: "equipements", photoCount: 6, plan: true,
+    slug: "guebwiller", title: "EHPAD de 120 lits | HCC | Guebwiller", group: "equipements", photoCount: 5,
+    plans: [
+      { file: "plan.jpg", label: "Plan masse" },
+      { file: "plan2.jpg", label: "Plan R+1" },
+    ],
+  },
+  {
+    slug: "zcb", title: "107 logements locatifs intermédiaires + commerces | SNI | Paris 17", group: "equipements", photoCount: 6,
+    plans: [
+      { file: "plan.jpg", label: "Plan masse" },
+      { file: "plan2.jpg", label: "Coupe" },
+    ],
     description: {
       lieu: "ZAC Clichy-Batignolles, lot E10A, 183 avenue de Clichy, Paris 17e",
       moe: MANDATAIRE,
@@ -136,7 +158,11 @@ const PROJECTS = [
     },
   },
   {
-    slug: "albert-thomas", title: "MAPAD de 73 lits | SAGE | Tremblay en France", group: "equipements", photoCount: 6, plan: true,
+    slug: "albert-thomas", title: "MAPAD de 73 lits | SAGE | Tremblay en France", group: "equipements", photoCount: 6,
+    plans: [
+      { file: "plan.jpg", label: "Plan de situation" },
+      { file: "plan2.jpg", label: "Plan RDC" },
+    ],
     description: {
       lieu: "Place Albert-Thomas, Tremblay-en-France (93)",
       moe: MANDATAIRE,
@@ -185,7 +211,11 @@ const PROJECTS = [
   },
   { slug: "opera-bastille", title: "Fermeture de façade | OPERA dE PARIS | Paris 4", group: "equipements", photoCount: 4, plan: true },
   {
-    slug: "rueil", title: "Espace cinématographique | Groupe SOPIC | Rueil Malmaison", group: "equipements", photoCount: 6, plan: true,
+    slug: "rueil", title: "Espace cinématographique | Groupe SOPIC | Rueil Malmaison", group: "equipements", photoCount: 6,
+    plans: [
+      { file: "plan.jpg", label: "Plan de situation" },
+      { file: "plan2.jpg", label: "Coupe perspective" },
+    ],
     description: {
       lieu: "Rueil-Malmaison (92)",
       moe: MANDATAIRE,

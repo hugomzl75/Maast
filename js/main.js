@@ -163,9 +163,16 @@ function renderProjectDetail() {
     )
     .join("");
 
-  const planHTML = project.plan
-    ? `<img class="project-plan" src="assets/projects/${project.slug}/plan.jpg" alt="${project.title} — plan">`
-    : "";
+  const plans = project.plans || (project.plan ? [{ file: "plan.jpg" }] : []);
+  const planHTML = plans
+    .map(
+      (pl) => `
+      <figure class="project-plan-figure">
+        ${plans.length > 1 && pl.label ? `<div class="project-plan-label">${pl.label}</div>` : ""}
+        <img class="project-plan" src="assets/projects/${project.slug}/${pl.file}" alt="${project.title} — ${pl.label || "plan"}">
+      </figure>`
+    )
+    .join("");
 
   container.innerHTML = `
     <h1 class="project-title project-title--mobile">${project.title}</h1>
@@ -196,19 +203,23 @@ function renderProjectDetail() {
 
 // ---------- Project plan lightbox ----------
 function initPlanLightbox() {
-  const plan = document.querySelector(".project-plan");
-  if (!plan) return;
+  const plans = document.querySelectorAll(".project-plan");
+  if (!plans.length) return;
 
   const overlay = document.createElement("div");
   overlay.className = "plan-lightbox";
   const img = document.createElement("img");
-  img.src = plan.src;
-  img.alt = plan.alt;
   overlay.appendChild(img);
   document.body.appendChild(overlay);
 
   const close = () => overlay.classList.remove("open");
-  plan.addEventListener("click", () => overlay.classList.add("open"));
+  plans.forEach((plan) => {
+    plan.addEventListener("click", () => {
+      img.src = plan.src;
+      img.alt = plan.alt;
+      overlay.classList.add("open");
+    });
+  });
   overlay.addEventListener("click", close);
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
