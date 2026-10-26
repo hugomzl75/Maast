@@ -143,6 +143,16 @@ function renderProjectDetail() {
 
   const photos = projectPhotos(project);
 
+  const descriptionHTML = (project.description || [])
+    .map(
+      (section) => `
+      <div class="project-description-section">
+        ${section.heading ? `<h3>${section.heading}</h3>` : ""}
+        <p>${section.text}</p>
+      </div>`
+    )
+    .join("");
+
   container.innerHTML = `
     <aside class="project-sidebar">
       <a class="project-back js-transition" href="projects.html">&larr; Projets</a>
@@ -157,6 +167,7 @@ function renderProjectDetail() {
         </figure>`
         )
         .join("")}
+      ${descriptionHTML ? `<div class="project-description">${descriptionHTML}</div>` : ""}
       <a class="project-next js-transition" href="project.html?p=${nextProject.slug}">
         <span class="project-next-label">Projet suivant</span>
         <span class="project-next-title">${nextProject.title}</span>

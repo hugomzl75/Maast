@@ -460,6 +460,31 @@ body.hover-etudes .project-tile[data-group="equipements"] {
   display: block;
 }
 
+.project-description {
+  max-width: 640px;
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.project-description-section h3 {
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--stone);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.project-description-section p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--charcoal);
+}
+
 .project-next {
   margin-top: 40px;
   padding: 70px 0 90px;
@@ -606,6 +631,7 @@ body.hover-etudes .project-tile[data-group="equipements"] {
   }
   .project-back { margin-bottom: 32px; }
   .project-photos { padding: 0 0; gap: 2px; }
+  .project-description { padding: 0 22px; max-width: none; }
   .project-next { padding: 50px 22px 70px; }
 }
 
