@@ -410,16 +410,18 @@ body.hover-etudes .project-tile[data-group="equipements"] {
 .project-sidebar {
   flex: none;
   width: 420px;
-  padding: 16px 40px 60px 40px;
+  padding: 0px 40px 60px 40px;
   display: flex;
   flex-direction: column;
 }
 
 .project-back {
+  display: inline-block;
   font-size: 0.76rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--stone);
+  margin-top: -4px;
   margin-bottom: 24px;
 }
 .project-back:hover { color: var(--black); }

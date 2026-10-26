@@ -143,12 +143,18 @@ function renderProjectDetail() {
 
   const photos = projectPhotos(project);
 
-  const descriptionHTML = (project.description || [])
+  const DESCRIPTION_FIELDS = [
+    { key: "contexte", heading: "contexte" },
+    { key: "programme", heading: "programme" },
+    { key: "mandataire", heading: "mandataire" },
+  ];
+  const descriptionHTML = DESCRIPTION_FIELDS
+    .filter((field) => project.description && project.description[field.key])
     .map(
-      (section) => `
+      (field) => `
       <div class="project-description-section">
-        ${section.heading ? `<h3>${section.heading}</h3>` : ""}
-        <p>${section.text}</p>
+        <h3>${field.heading}</h3>
+        <p>${project.description[field.key]}</p>
       </div>`
     )
     .join("");
