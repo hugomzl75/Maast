@@ -390,11 +390,7 @@ section { padding: 120px 0; }
 }
 
 body.hover-logements .project-tile[data-group="equipements"],
-body.hover-logements .project-tile[data-group="etudes"],
-body.hover-equipements .project-tile[data-group="logements"],
-body.hover-equipements .project-tile[data-group="etudes"],
-body.hover-etudes .project-tile[data-group="logements"],
-body.hover-etudes .project-tile[data-group="equipements"] {
+body.hover-equipements .project-tile[data-group="logements"] {
   filter: blur(5px) brightness(0.6);
   opacity: 0.55;
 }
@@ -455,7 +451,7 @@ body.hover-etudes .project-tile[data-group="equipements"] {
   padding: 0 40px 0 0;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 3mm;
 }
 
 .project-photo {
@@ -669,7 +665,7 @@ body.hover-etudes .project-tile[data-group="equipements"] {
     flex-direction: column;
     padding-top: 90px;
   }
-  .project-photos { order: 1; padding: 0 0; gap: 2px; }
+  .project-photos { order: 1; padding: 0 0; gap: 3mm; }
   .project-sidebar {
     order: 2;
     position: static;

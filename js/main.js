@@ -144,9 +144,13 @@ function renderProjectDetail() {
   const photos = projectPhotos(project);
 
   const DESCRIPTION_FIELDS = [
-    { key: "contexte", heading: "contexte" },
+    { key: "lieu", heading: "lieu" },
+    { key: "moe", heading: "maîtrise d'œuvre" },
     { key: "programme", heading: "programme" },
-    { key: "mandataire", heading: "mandataire" },
+    { key: "surface", heading: "surface" },
+    { key: "cout", heading: "coût de construction" },
+    { key: "certification", heading: "certification environnementale" },
+    { key: "contexte", heading: "contexte" },
   ];
   const descriptionHTML = DESCRIPTION_FIELDS
     .filter((field) => project.description && project.description[field.key])
