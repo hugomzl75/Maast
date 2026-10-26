@@ -79,7 +79,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "jean-jaures", title: "34 logements en accession + commerces | Nexity | Clichy la Garenne", group: "equipements", photoCount: 5,
+    slug: "jean-jaures", title: "34 logements en accession + commerces | Nexity | Clichy la Garenne", group: "equipements", photoCount: 6, cover: 2,
     description: {
       contexte: "Le site proposé par Nexity est au cœur de Clichy-la-Garenne, proche des équipements et du métro, dans un tissu de faubourg hétéroclite offrant en bon voisinage : pavillons, petits logements collectifs, commerces de proximité et bâtiments industriels de bonne facture.",
       programme: "Réalisation de 34 logements en accession, commerces au rez-de-chaussée et parkings.",
@@ -104,7 +104,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "jean-viollet", title: "EHPAD de 82 lits + 27 logements | SAHLM du Moulin Vert | la Courneuve", group: "equipements", photoCount: 4,
+    slug: "jean-viollet", title: "EHPAD de 82 lits + 27 logements | SAHLM du Moulin Vert | la Courneuve", group: "equipements", photoCount: 5, cover: 2,
     description: {
       contexte: "Le bâtiment est situé dans le quartier de la gare en pleine restructuration. Il est mitoyen du bâtiment des Pléiades construit dans les années 70.",
       programme: "Réalisation d'un Ehpad de 82 chambres et d'un ensemble de 27 logements sociaux avec parking en infrastructure.",
@@ -112,7 +112,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "prony", title: "Bureaux | Groupe MEDERIC | Paris 17", group: "equipements", photoCount: 3,
+    slug: "prony", title: "Bureaux | Groupe MEDERIC | Paris 17", group: "equipements", photoCount: 4, cover: 2,
     description: {
       contexte: "Situé dans un quartier d'architecture haussmannienne, à proximité du parc Monceau, le bâtiment retrouve la partition classique de la rue à travers une nouvelle façade en double peau de verre tramé verticalement.",
       programme: "Restructuration d'un immeuble de bureaux avec recomposition de la façade sur rue.",
@@ -120,7 +120,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "snecma", title: "Bureaux | Groupe SAFRAN | Evry Corbeil", group: "equipements", photoCount: 4,
+    slug: "snecma", title: "Bureaux | Groupe SAFRAN | Evry Corbeil", group: "equipements", photoCount: 5, cover: 2,
     description: {
       contexte: "Le site de la Snecma à Evry-Corbeil : le bâtiment existant, une usine et ses bureaux, est à optimiser et humaniser.",
       programme: "Restructuration des bureaux, ateliers et vestiaires du site d'Evry-Corbeil.",
