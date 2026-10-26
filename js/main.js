@@ -159,11 +159,16 @@ function renderProjectDetail() {
     )
     .join("");
 
+  const planHTML = project.plan
+    ? `<img class="project-plan" src="assets/projects/${project.slug}/plan.jpg" alt="${project.title} — plan">`
+    : "";
+
   container.innerHTML = `
     <aside class="project-sidebar">
       <a class="project-back js-transition" href="projects.html">&larr; Projets</a>
       <h1 class="project-title">${project.title}</h1>
       ${descriptionHTML ? `<div class="project-description">${descriptionHTML}</div>` : ""}
+      ${planHTML}
     </aside>
     <div class="project-photos">
       ${photos
