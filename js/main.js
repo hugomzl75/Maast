@@ -168,6 +168,7 @@ function renderProjectDetail() {
     : "";
 
   container.innerHTML = `
+    <h1 class="project-title project-title--mobile">${project.title}</h1>
     <aside class="project-sidebar">
       <a class="project-back js-transition" href="projects.html">&larr; Projets</a>
       <h1 class="project-title">${project.title}</h1>

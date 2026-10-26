@@ -437,6 +437,10 @@ body.hover-equipements .project-tile[data-group="logements"] {
   margin-bottom: 40px;
 }
 
+.project-title--mobile {
+  display: none;
+}
+
 .project-meta {
   font-size: 0.78rem;
   letter-spacing: 0.08em;
@@ -665,6 +669,11 @@ body.hover-equipements .project-tile[data-group="logements"] {
     flex-direction: column;
     padding-top: 90px;
   }
+  .project-title--mobile {
+    display: block;
+    order: 0;
+    margin: 0 22px 22px;
+  }
   .project-photos { order: 1; padding: 0 0; gap: 3mm; }
   .project-sidebar {
     order: 2;
@@ -674,9 +683,9 @@ body.hover-equipements .project-tile[data-group="logements"] {
     overflow-y: visible;
     padding: 0 22px 40px;
   }
+  .project-sidebar .project-title { display: none; }
   .project-next { order: 3; margin-top: 0; padding: 50px 22px 70px; }
   .project-back { margin-bottom: 24px; }
-  .project-title { margin-bottom: 28px; }
   .plan-lightbox { padding: 24px; }
 }
 
