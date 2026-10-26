@@ -65,7 +65,7 @@ const PROJECTS = [
   },
   // Programmes mixtes & équipements
   {
-    slug: "vaucouleurs", title: "152 logements + commerces | Paris Habitat | Paris 11", group: "equipements", photoCount: 4, cover: 2, plan: true,
+    slug: "vaucouleurs", title: "152 logements + commerces | Paris Habitat | Paris 11", group: "equipements", photoCount: 4, plan: true,
     description: {
       programme: "Opération de réhabilitation de logements rues de Vaucouleurs, de la Fontaine aux Rois, de l'Orillon et du Moulin Joly.",
       mandataire: "maast.a",

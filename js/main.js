@@ -185,6 +185,29 @@ function renderProjectDetail() {
       </a>
     </div>
   `;
+
+  initPlanLightbox();
+}
+
+// ---------- Project plan lightbox ----------
+function initPlanLightbox() {
+  const plan = document.querySelector(".project-plan");
+  if (!plan) return;
+
+  const overlay = document.createElement("div");
+  overlay.className = "plan-lightbox";
+  const img = document.createElement("img");
+  img.src = plan.src;
+  img.alt = plan.alt;
+  overlay.appendChild(img);
+  document.body.appendChild(overlay);
+
+  const close = () => overlay.classList.remove("open");
+  plan.addEventListener("click", () => overlay.classList.add("open"));
+  overlay.addEventListener("click", close);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
