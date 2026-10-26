@@ -9,7 +9,7 @@ const MANDATAIRE = "maast architecture — Isabelle Manescau & François Marzell
 const PROJECTS = [
   // Logements
   {
-    slug: "amiens", title: "11 logements sociaux | SIP | Amiens", group: "logements", photoCount: 7,
+    slug: "amiens", title: "11 logements sociaux | SIP | Amiens", group: "logements", photoCount: 8,
     description: {
       contexte: "L'opération est située à Amiens dans la ZAC Paul-Claudel, superficie totale de 40 ha au sud de la ville, à proximité du centre-ville, et répond à la manière d'habiter à la fois dans un parc et en ville.",
       programme: "Réalisation d'un immeuble de 11 logements collectifs locatifs et parking en superstructure.",
