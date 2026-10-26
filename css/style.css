@@ -404,16 +404,13 @@ body.hover-etudes .project-tile[data-group="equipements"] {
 .project-layout {
   display: flex;
   align-items: flex-start;
-  padding-top: 112px;
+  padding-top: 100px;
 }
 
 .project-sidebar {
-  position: sticky;
-  top: 112px;
   flex: none;
-  width: 320px;
-  max-height: calc(100vh - 112px);
-  padding: 40px 40px 40px 40px;
+  width: 420px;
+  padding: 16px 40px 60px 40px;
   display: flex;
   flex-direction: column;
 }
@@ -423,7 +420,7 @@ body.hover-etudes .project-tile[data-group="equipements"] {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--stone);
-  margin-bottom: 64px;
+  margin-bottom: 24px;
 }
 .project-back:hover { color: var(--black); }
 
@@ -431,7 +428,7 @@ body.hover-etudes .project-tile[data-group="equipements"] {
   font-size: clamp(1.7rem, 2.4vw, 2.4rem);
   font-weight: 300;
   line-height: 1.15;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
 }
 
 .project-meta {
@@ -461,13 +458,9 @@ body.hover-etudes .project-tile[data-group="equipements"] {
 }
 
 .project-description {
-  max-width: 640px;
-  margin-top: 50px;
-  padding-top: 50px;
-  border-top: 1px solid var(--line);
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 30px;
 }
 
 .project-description-section h3 {
@@ -624,14 +617,12 @@ body.hover-etudes .project-tile[data-group="equipements"] {
 
   .project-layout { flex-direction: column; padding-top: 90px; }
   .project-sidebar {
-    position: static;
     width: 100%;
-    max-height: none;
     padding: 0 22px 40px;
   }
-  .project-back { margin-bottom: 32px; }
+  .project-back { margin-bottom: 24px; }
+  .project-title { margin-bottom: 28px; }
   .project-photos { padding: 0 0; gap: 2px; }
-  .project-description { padding: 0 22px; max-width: none; }
   .project-next { padding: 50px 22px 70px; }
 }
 

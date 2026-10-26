@@ -157,6 +157,7 @@ function renderProjectDetail() {
     <aside class="project-sidebar">
       <a class="project-back js-transition" href="projects.html">&larr; Projets</a>
       <h1 class="project-title">${project.title}</h1>
+      ${descriptionHTML ? `<div class="project-description">${descriptionHTML}</div>` : ""}
     </aside>
     <div class="project-photos">
       ${photos
@@ -167,7 +168,6 @@ function renderProjectDetail() {
         </figure>`
         )
         .join("")}
-      ${descriptionHTML ? `<div class="project-description">${descriptionHTML}</div>` : ""}
       <a class="project-next js-transition" href="project.html?p=${nextProject.slug}">
         <span class="project-next-label">Projet suivant</span>
         <span class="project-next-title">${nextProject.title}</span>
