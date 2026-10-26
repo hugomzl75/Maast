@@ -179,11 +179,11 @@ function renderProjectDetail() {
         </figure>`
         )
         .join("")}
-      <a class="project-next js-transition" href="project.html?p=${nextProject.slug}">
-        <span class="project-next-label">Projet suivant</span>
-        <span class="project-next-title">${nextProject.title}</span>
-      </a>
     </div>
+    <a class="project-next js-transition" href="project.html?p=${nextProject.slug}">
+      <span class="project-next-label">Projet suivant</span>
+      <span class="project-next-title">${nextProject.title}</span>
+    </a>
   `;
 
   initPlanLightbox();

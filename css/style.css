@@ -402,16 +402,19 @@ body.hover-etudes .project-tile[data-group="equipements"] {
 /* ---------- Project detail ---------- */
 
 .project-layout {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  grid-template-areas:
+    "sidebar photos"
+    "sidebar next";
+  align-items: start;
   padding-top: 100px;
 }
 
 .project-sidebar {
+  grid-area: sidebar;
   position: sticky;
   top: 100px;
-  flex: none;
-  width: 420px;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
   padding: 0px 40px 60px 40px;
@@ -447,7 +450,7 @@ body.hover-etudes .project-tile[data-group="equipements"] {
 }
 
 .project-photos {
-  flex: 1;
+  grid-area: photos;
   min-width: 0;
   padding: 0 40px 0 0;
   display: flex;
@@ -524,8 +527,9 @@ body.hover-etudes .project-tile[data-group="equipements"] {
 }
 
 .project-next {
+  grid-area: next;
   margin-top: 40px;
-  padding: 70px 0 90px;
+  padding: 70px 40px 90px 0;
   border-top: 1px solid var(--line);
   display: flex;
   flex-direction: column;
@@ -660,18 +664,23 @@ body.hover-etudes .project-tile[data-group="equipements"] {
     width: clamp(154px, 38vw, 243px);
   }
 
-  .project-layout { flex-direction: column; padding-top: 90px; }
+  .project-layout {
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+  }
+  .project-photos { order: 1; padding: 0 0; gap: 2px; }
   .project-sidebar {
+    order: 2;
     position: static;
     width: 100%;
     max-height: none;
     overflow-y: visible;
     padding: 0 22px 40px;
   }
+  .project-next { order: 3; margin-top: 0; padding: 50px 22px 70px; }
   .project-back { margin-bottom: 24px; }
   .project-title { margin-bottom: 28px; }
-  .project-photos { padding: 0 0; gap: 2px; }
   .plan-lightbox { padding: 24px; }
-  .project-next { padding: 50px 22px 70px; }
 }
 
