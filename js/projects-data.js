@@ -30,7 +30,11 @@ const PROJECTS = [
     },
   },
   {
-    slug: "reginaldo", title: "43 studios | I3F | Paris 11", group: "logements", photoCount: 6, plan: true,
+    slug: "reginaldo", title: "43 studios | I3F | Paris 11", group: "logements", photoCount: 6,
+    plans: [
+      { file: "plan.jpg", label: "Plan masse" },
+      { file: "plan2.jpg", label: "Coupe" },
+    ],
     description: {
       lieu: "51 boulevard de Belleville, Paris 11e",
       moe: MANDATAIRE,
@@ -186,7 +190,11 @@ const PROJECTS = [
     },
   },
   {
-    slug: "prony", title: "Bureaux | Groupe MEDERIC | Paris 17", group: "equipements", photoCount: 3, plan: true,
+    slug: "prony", title: "Bureaux | Groupe MEDERIC | Paris 17", group: "equipements", photoCount: 3,
+    plans: [
+      { file: "plan.jpg", label: "Plan masse" },
+      { file: "plan2.jpg", label: "Coupe" },
+    ],
     description: {
       lieu: "44 rue de Prony, Paris 17e",
       moe: MANDATAIRE,
@@ -198,7 +206,11 @@ const PROJECTS = [
     },
   },
   {
-    slug: "snecma", title: "Bureaux | Groupe SAFRAN | Evry Corbeil", group: "equipements", photoCount: 3, plan: true,
+    slug: "snecma", title: "Bureaux | Groupe SAFRAN | Evry Corbeil", group: "equipements", photoCount: 3,
+    plans: [
+      { file: "plan.jpg", label: "Plan masse" },
+      { file: "plan2.jpg", label: "Plan R+1" },
+    ],
     description: {
       lieu: "Route Henri-Auguste-Desbruyères, Evry cedex (91)",
       moe: MANDATAIRE,

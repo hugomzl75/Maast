@@ -507,6 +507,16 @@ body.hover-equipements .project-tile[data-group="logements"] {
   color: var(--charcoal);
 }
 
+.project-narrative .project-description-section h3 {
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+}
+
+.project-narrative .project-description-section p {
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
 .project-plan-figure {
   margin-top: 40px;
 }
