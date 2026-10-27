@@ -399,10 +399,10 @@ body.hover-equipements .project-tile[data-group="logements"] {
 
 .project-layout {
   display: grid;
-  grid-template-columns: 300px 1fr 460px;
+  grid-template-columns: 420px 1fr;
   grid-template-areas:
-    "sidebar photos narrative"
-    "sidebar next narrative";
+    "sidebar photos"
+    "sidebar next";
   align-items: start;
   padding-top: 28px;
 }
@@ -410,42 +410,36 @@ body.hover-equipements .project-tile[data-group="logements"] {
 .project-sidebar {
   grid-area: sidebar;
   position: sticky;
-  top: 100px;
+  top: 28px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   display: flex;
   flex-direction: column;
-  padding: 72px 32px 60px 40px;
+  padding: 52px 40px 60px 40px;
 }
 
-.project-narrative {
-  grid-area: narrative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: calc(100vh - 28px);
-  padding: 0px 40px 60px 32px;
-  box-sizing: border-box;
-}
-
-.project-narrative .project-plan-figure:first-child {
-  margin-top: 0;
+.project-sidebar::-webkit-scrollbar {
+  display: none;
 }
 
 .project-back {
   display: inline-block;
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--stone);
   margin-top: -4px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .project-back:hover { color: var(--black); }
 
 .project-title {
-  font-size: clamp(1.7rem, 2.4vw, 2.4rem);
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
   font-weight: 300;
   line-height: 1.15;
-  margin-bottom: 32px;
+  margin-bottom: 26px;
 }
 
 .project-title--mobile {
@@ -481,12 +475,12 @@ body.hover-equipements .project-tile[data-group="logements"] {
 .project-description {
   display: flex;
   flex-direction: column;
-  gap: 17px;
+  gap: 14px;
 }
 
 .project-description-section h3 {
-  font-size: 0.68rem;
-  letter-spacing: 0.03em;
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--stone);
   font-weight: 400;
@@ -495,48 +489,29 @@ body.hover-equipements .project-tile[data-group="logements"] {
 
 .project-description-section p {
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.55;
+  font-size: 0.8rem;
+  line-height: 1.5;
   color: var(--charcoal);
 }
 
-.project-narrative {
-  --narrative-scale: 1;
-}
-
-.project-narrative .project-description {
-  gap: calc(17px * var(--narrative-scale));
-}
-
-.project-narrative .project-description-section h3 {
-  font-size: calc(0.6rem * var(--narrative-scale));
-  letter-spacing: 0.06em;
-}
-
-.project-narrative .project-description-section p {
-  font-size: calc(0.76rem * var(--narrative-scale));
-  line-height: 1.6;
-}
-
 .project-plan-figure {
-  margin: calc(40px * var(--narrative-scale, 1)) 0 0 0;
+  margin: 32px 0 0 0;
 }
 
 .project-plan-figure + .project-plan-figure {
-  margin-top: calc(24px * var(--narrative-scale, 1));
+  margin-top: 20px;
 }
 
 .project-plan-label {
-  font-size: calc(0.64rem * var(--narrative-scale, 1));
+  font-size: 0.6rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--stone);
-  margin-bottom: calc(8px * var(--narrative-scale, 1));
+  margin-bottom: 6px;
 }
 
 .project-plan {
-  width: calc(100% * var(--narrative-scale, 1));
-  margin: 0 auto;
+  width: 100%;
   background: var(--cream);
   cursor: zoom-in;
   transition: opacity 0.25s ease;
@@ -721,27 +696,16 @@ body.hover-equipements .project-tile[data-group="logements"] {
     margin: 0 22px 22px;
   }
   .project-photos { order: 1; padding: 0 0; gap: 3mm; }
-  .project-sidebar,
-  .project-narrative {
-    max-height: none;
-    overflow-y: visible;
-  }
   .project-sidebar {
     order: 2;
     position: static;
     width: 100%;
-    padding: 0 22px 20px;
-  }
-  .project-sidebar .project-title { display: none; }
-  .project-narrative {
-    order: 3;
-    position: static;
-    width: 100%;
-    height: auto;
-    justify-content: flex-start;
+    max-height: none;
+    overflow-y: visible;
     padding: 0 22px 40px;
   }
-  .project-next { order: 4; margin-top: 0; padding: 50px 22px 70px; }
+  .project-sidebar .project-title { display: none; }
+  .project-next { order: 3; margin-top: 0; padding: 50px 22px 70px; }
   .project-back { margin-bottom: 24px; }
   .plan-lightbox { padding: 24px; }
 }

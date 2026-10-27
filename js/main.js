@@ -143,29 +143,24 @@ function renderProjectDetail() {
 
   const photos = projectPhotos(project);
 
-  const META_FIELDS = [
+  const DESCRIPTION_FIELDS = [
     { key: "lieu", heading: "lieu" },
     { key: "moe", heading: "maîtrise d'œuvre" },
+    { key: "programme", heading: "programme" },
     { key: "surface", heading: "surface" },
     { key: "cout", heading: "coût de construction" },
     { key: "certification", heading: "certification environnementale" },
-  ];
-  const NARRATIVE_FIELDS = [
-    { key: "programme", heading: "programme" },
     { key: "contexte", heading: "contexte" },
   ];
-  const fieldHTML = (field) => `
+  const descriptionHTML = DESCRIPTION_FIELDS
+    .filter((field) => project.description && project.description[field.key])
+    .map(
+      (field) => `
       <div class="project-description-section">
         <h3>${field.heading}</h3>
         <p>${project.description[field.key]}</p>
-      </div>`;
-  const descriptionHTML = META_FIELDS
-    .filter((field) => project.description && project.description[field.key])
-    .map(fieldHTML)
-    .join("");
-  const narrativeHTML = NARRATIVE_FIELDS
-    .filter((field) => project.description && project.description[field.key])
-    .map(fieldHTML)
+      </div>`
+    )
     .join("");
 
   const plans = project.plans || (project.plan ? [{ file: "plan.jpg" }] : []);
@@ -185,6 +180,7 @@ function renderProjectDetail() {
       <a class="project-back js-transition" href="projects.html">&larr; Projets</a>
       <h1 class="project-title">${project.title}</h1>
       ${descriptionHTML ? `<div class="project-description">${descriptionHTML}</div>` : ""}
+      ${planHTML}
     </aside>
     <div class="project-photos">
       ${photos
@@ -200,49 +196,9 @@ function renderProjectDetail() {
       <span class="project-next-label">Projet suivant</span>
       <span class="project-next-title">${nextProject.title}</span>
     </a>
-    ${narrativeHTML || planHTML ? `<aside class="project-narrative">${narrativeHTML ? `<div class="project-description">${narrativeHTML}</div>` : ""}${planHTML}</aside>` : ""}
   `;
 
   initPlanLightbox();
-  initNarrativeFit();
-}
-
-// ---------- Narrative column auto-fit ----------
-function initNarrativeFit() {
-  const narrative = document.querySelector(".project-narrative");
-  if (!narrative) return;
-
-  const fit = () => {
-    if (window.innerWidth <= 900) {
-      narrative.style.setProperty("--narrative-scale", 1);
-      narrative.style.height = "";
-      narrative.style.justifyContent = "";
-      return;
-    }
-    const target = window.innerHeight - 28;
-    narrative.style.height = "auto";
-    narrative.style.justifyContent = "flex-start";
-    let scale = 1;
-    narrative.style.setProperty("--narrative-scale", scale);
-    while (narrative.scrollHeight > target && scale > 0.6) {
-      scale = Math.round((scale - 0.02) * 100) / 100;
-      narrative.style.setProperty("--narrative-scale", scale);
-    }
-    narrative.style.height = "";
-    narrative.style.justifyContent = "";
-  };
-
-  if (document.readyState === "complete") {
-    fit();
-  } else {
-    window.addEventListener("load", fit);
-  }
-
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(fit, 150);
-  });
 }
 
 // ---------- Project plan lightbox ----------
