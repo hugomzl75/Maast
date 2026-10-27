@@ -399,24 +399,39 @@ body.hover-equipements .project-tile[data-group="logements"] {
 
 .project-layout {
   display: grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: 300px 1fr 300px;
   grid-template-areas:
-    "sidebar photos"
-    "sidebar next";
+    "sidebar photos narrative"
+    "sidebar next narrative";
   align-items: start;
   padding-top: 100px;
 }
 
-.project-sidebar {
-  grid-area: sidebar;
+.project-sidebar,
+.project-narrative {
   position: sticky;
   top: 100px;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
-  padding: 0px 40px 60px 40px;
   display: flex;
   flex-direction: column;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.project-sidebar::-webkit-scrollbar,
+.project-narrative::-webkit-scrollbar {
+  display: none;
+}
+
+.project-sidebar {
+  grid-area: sidebar;
+  padding: 0px 32px 60px 40px;
+}
+
+.project-narrative {
+  grid-area: narrative;
+  padding: 0px 40px 60px 32px;
 }
 
 .project-back {
@@ -452,7 +467,7 @@ body.hover-equipements .project-tile[data-group="logements"] {
 .project-photos {
   grid-area: photos;
   min-width: 0;
-  padding: 0 40px 0 0;
+  padding: 0 32px;
   display: flex;
   flex-direction: column;
   gap: 3mm;
@@ -691,16 +706,25 @@ body.hover-equipements .project-tile[data-group="logements"] {
     margin: 0 22px 22px;
   }
   .project-photos { order: 1; padding: 0 0; gap: 3mm; }
+  .project-sidebar,
+  .project-narrative {
+    max-height: none;
+    overflow-y: visible;
+  }
   .project-sidebar {
     order: 2;
     position: static;
     width: 100%;
-    max-height: none;
-    overflow-y: visible;
-    padding: 0 22px 40px;
+    padding: 0 22px 20px;
   }
   .project-sidebar .project-title { display: none; }
-  .project-next { order: 3; margin-top: 0; padding: 50px 22px 70px; }
+  .project-narrative {
+    order: 3;
+    position: static;
+    width: 100%;
+    padding: 0 22px 40px;
+  }
+  .project-next { order: 4; margin-top: 0; padding: 50px 22px 70px; }
   .project-back { margin-bottom: 24px; }
   .plan-lightbox { padding: 24px; }
 }

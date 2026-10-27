@@ -143,24 +143,29 @@ function renderProjectDetail() {
 
   const photos = projectPhotos(project);
 
-  const DESCRIPTION_FIELDS = [
+  const META_FIELDS = [
     { key: "lieu", heading: "lieu" },
     { key: "moe", heading: "maîtrise d'œuvre" },
-    { key: "programme", heading: "programme" },
     { key: "surface", heading: "surface" },
     { key: "cout", heading: "coût de construction" },
     { key: "certification", heading: "certification environnementale" },
+  ];
+  const NARRATIVE_FIELDS = [
+    { key: "programme", heading: "programme" },
     { key: "contexte", heading: "contexte" },
   ];
-  const descriptionHTML = DESCRIPTION_FIELDS
-    .filter((field) => project.description && project.description[field.key])
-    .map(
-      (field) => `
+  const fieldHTML = (field) => `
       <div class="project-description-section">
         <h3>${field.heading}</h3>
         <p>${project.description[field.key]}</p>
-      </div>`
-    )
+      </div>`;
+  const descriptionHTML = META_FIELDS
+    .filter((field) => project.description && project.description[field.key])
+    .map(fieldHTML)
+    .join("");
+  const narrativeHTML = NARRATIVE_FIELDS
+    .filter((field) => project.description && project.description[field.key])
+    .map(fieldHTML)
     .join("");
 
   const plans = project.plans || (project.plan ? [{ file: "plan.jpg" }] : []);
@@ -196,6 +201,7 @@ function renderProjectDetail() {
       <span class="project-next-label">Projet suivant</span>
       <span class="project-next-title">${nextProject.title}</span>
     </a>
+    ${narrativeHTML ? `<aside class="project-narrative"><div class="project-description">${narrativeHTML}</div></aside>` : ""}
   `;
 
   initPlanLightbox();
