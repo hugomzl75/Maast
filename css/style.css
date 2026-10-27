@@ -429,10 +429,6 @@ body.hover-equipements .project-tile[data-group="logements"] {
   -ms-overflow-style: none;
 }
 
-.project-narrative .project-description {
-  max-width: 300px;
-}
-
 .project-narrative::-webkit-scrollbar {
   display: none;
 }
