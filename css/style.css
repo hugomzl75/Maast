@@ -411,17 +411,8 @@ body.hover-equipements .project-tile[data-group="logements"] {
 .project-narrative {
   position: sticky;
   top: 100px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.project-sidebar::-webkit-scrollbar,
-.project-narrative::-webkit-scrollbar {
-  display: none;
 }
 
 .project-sidebar {
@@ -432,6 +423,18 @@ body.hover-equipements .project-tile[data-group="logements"] {
 .project-narrative {
   grid-area: narrative;
   padding: 0px 40px 60px 32px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.project-narrative::-webkit-scrollbar {
+  display: none;
+}
+
+.project-narrative .project-plan-figure:first-child {
+  margin-top: 0;
 }
 
 .project-back {

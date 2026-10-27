@@ -185,7 +185,6 @@ function renderProjectDetail() {
       <a class="project-back js-transition" href="projects.html">&larr; Projets</a>
       <h1 class="project-title">${project.title}</h1>
       ${descriptionHTML ? `<div class="project-description">${descriptionHTML}</div>` : ""}
-      ${planHTML}
     </aside>
     <div class="project-photos">
       ${photos
@@ -201,7 +200,7 @@ function renderProjectDetail() {
       <span class="project-next-label">Projet suivant</span>
       <span class="project-next-title">${nextProject.title}</span>
     </a>
-    ${narrativeHTML ? `<aside class="project-narrative"><div class="project-description">${narrativeHTML}</div></aside>` : ""}
+    ${narrativeHTML || planHTML ? `<aside class="project-narrative">${narrativeHTML ? `<div class="project-description">${narrativeHTML}</div>` : ""}${planHTML}</aside>` : ""}
   `;
 
   initPlanLightbox();
