@@ -404,33 +404,22 @@ body.hover-equipements .project-tile[data-group="logements"] {
     "sidebar photos narrative"
     "sidebar next narrative";
   align-items: start;
-  padding-top: 100px;
-}
-
-.project-sidebar,
-.project-narrative {
-  position: sticky;
-  top: 100px;
-  display: flex;
-  flex-direction: column;
 }
 
 .project-sidebar {
   grid-area: sidebar;
-  padding: 0px 32px 60px 40px;
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 32px 60px 40px;
 }
 
 .project-narrative {
   grid-area: narrative;
+  display: flex;
+  flex-direction: column;
   padding: 0px 40px 60px 32px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.project-narrative::-webkit-scrollbar {
-  display: none;
 }
 
 .project-narrative .project-plan-figure:first-child {
