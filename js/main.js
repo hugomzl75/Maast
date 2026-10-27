@@ -204,6 +204,45 @@ function renderProjectDetail() {
   `;
 
   initPlanLightbox();
+  initNarrativeFit();
+}
+
+// ---------- Narrative column auto-fit ----------
+function initNarrativeFit() {
+  const narrative = document.querySelector(".project-narrative");
+  if (!narrative) return;
+
+  const fit = () => {
+    if (window.innerWidth <= 900) {
+      narrative.style.setProperty("--narrative-scale", 1);
+      narrative.style.height = "";
+      narrative.style.justifyContent = "";
+      return;
+    }
+    const target = window.innerHeight - 28;
+    narrative.style.height = "auto";
+    narrative.style.justifyContent = "flex-start";
+    let scale = 1;
+    narrative.style.setProperty("--narrative-scale", scale);
+    while (narrative.scrollHeight > target && scale > 0.6) {
+      scale = Math.round((scale - 0.02) * 100) / 100;
+      narrative.style.setProperty("--narrative-scale", scale);
+    }
+    narrative.style.height = "";
+    narrative.style.justifyContent = "";
+  };
+
+  if (document.readyState === "complete") {
+    fit();
+  } else {
+    window.addEventListener("load", fit);
+  }
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(fit, 150);
+  });
 }
 
 // ---------- Project plan lightbox ----------
