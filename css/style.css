@@ -518,7 +518,7 @@ body.hover-equipements .project-tile[data-group="logements"] {
 }
 
 .project-plan-figure {
-  margin-top: 40px;
+  margin: 40px 0 0 0;
 }
 
 .project-plan-figure + .project-plan-figure {
