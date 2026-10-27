@@ -8,7 +8,8 @@ const MANDATAIRE = "maast.a";
 const PROJECTS = [
   // Logements
   {
-    slug: "amiens", title: "11 logements sociaux | SIP | Amiens", group: "logements", photoCount: 9, plan: true,
+    slug: "amiens", title: "11 logements sociaux | SIP | Amiens", group: "logements", photoCount: 9,
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "ZAC Paul-Claudel tranche 4, îlot D5, Amiens (80)",
       moe: MANDATAIRE,
@@ -20,7 +21,8 @@ const PROJECTS = [
     },
   },
   {
-    slug: "poyenne", title: "103 studios | ADOMA | Bordeaux", group: "logements", photoCount: 5, plan: true,
+    slug: "poyenne", title: "103 studios | ADOMA | Bordeaux", group: "logements", photoCount: 5,
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Bordeaux (33)",
       moe: MANDATAIRE,
@@ -31,10 +33,7 @@ const PROJECTS = [
   },
   {
     slug: "reginaldo", title: "43 studios | I3F | Paris 11", group: "logements", photoCount: 6,
-    plans: [
-      { file: "plan.jpg", label: "Plan masse" },
-      { file: "plan2.jpg", label: "Coupe" },
-    ],
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "51 boulevard de Belleville, Paris 11e",
       moe: MANDATAIRE,
@@ -47,10 +46,7 @@ const PROJECTS = [
   },
   {
     slug: "poissonniers", title: "6 logements sociaux | RIVP | Paris 18", group: "logements", photoCount: 5,
-    plans: [
-      { file: "plan.jpg", label: "Plan masse" },
-      { file: "plan2.jpg", label: "Coupe" },
-    ],
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "36 rue des Poissonniers, Paris 18e",
       moe: MANDATAIRE,
@@ -78,7 +74,8 @@ const PROJECTS = [
     },
   },
   {
-    slug: "crouy", title: "45 logements | OPAL | Crouy", group: "logements", photoCount: 7, plan: true,
+    slug: "crouy", title: "45 logements | OPAL | Crouy", group: "logements", photoCount: 7,
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Avenue du Général-Patton / rue Louis-et-Edouard-Gérard, Crouy (02)",
       moe: `${MANDATAIRE} (architecte associé : Pouget-Delasalle architectes)`,
@@ -91,10 +88,7 @@ const PROJECTS = [
   },
   {
     slug: "maroc", title: "46 logements sociaux | Paris Habitat | Paris 19", group: "logements", photoCount: 4,
-    plans: [
-      { file: "plan.jpg", label: "Plan masse" },
-      { file: "plan2.jpg", label: "Coupe transversale" },
-    ],
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "14/16 rue du Maroc, Paris 19e",
       moe: MANDATAIRE,
@@ -107,7 +101,8 @@ const PROJECTS = [
   },
   // Programmes mixtes & équipements
   {
-    slug: "vaucouleurs", title: "152 logements + commerces | Paris Habitat | Paris 11", group: "equipements", photoCount: 3, plan: true,
+    slug: "vaucouleurs", title: "152 logements + commerces | Paris Habitat | Paris 11", group: "equipements", photoCount: 3,
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Rues de Vaucouleurs, de la Fontaine-aux-Rois, de l'Orillon et du Moulin-Joly, Paris 11e",
       moe: MANDATAIRE,
@@ -127,7 +122,8 @@ const PROJECTS = [
     },
   },
   {
-    slug: "jean-jaures", title: "34 logements en accession + commerces | Nexity | Clichy la Garenne", group: "equipements", photoCount: 5, plan: true,
+    slug: "jean-jaures", title: "34 logements en accession + commerces | Nexity | Clichy la Garenne", group: "equipements", photoCount: 5,
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "33 boulevard Jean-Jaurès, Clichy-la-Garenne (92)",
       moe: MANDATAIRE,
@@ -147,10 +143,7 @@ const PROJECTS = [
   },
   {
     slug: "zcb", title: "107 logements locatifs intermédiaires + commerces | SNI | Paris 17", group: "equipements", photoCount: 6,
-    plans: [
-      { file: "plan.jpg", label: "Plan masse" },
-      { file: "plan2.jpg", label: "Coupe" },
-    ],
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "ZAC Clichy-Batignolles, lot E10A, 183 avenue de Clichy, Paris 17e",
       moe: MANDATAIRE,
@@ -178,7 +171,8 @@ const PROJECTS = [
     },
   },
   {
-    slug: "jean-viollet", title: "EHPAD de 82 lits + 27 logements | SAHLM du Moulin Vert | la Courneuve", group: "equipements", photoCount: 5, plan: true,
+    slug: "jean-viollet", title: "EHPAD de 82 lits + 27 logements | SAHLM du Moulin Vert | la Courneuve", group: "equipements", photoCount: 5,
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Allée des Pléiades, La Courneuve (93)",
       moe: MANDATAIRE,
@@ -191,10 +185,7 @@ const PROJECTS = [
   },
   {
     slug: "prony", title: "Bureaux | Groupe MEDERIC | Paris 17", group: "equipements", photoCount: 3,
-    plans: [
-      { file: "plan.jpg", label: "Plan masse" },
-      { file: "plan2.jpg", label: "Coupe" },
-    ],
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "44 rue de Prony, Paris 17e",
       moe: MANDATAIRE,
@@ -221,13 +212,13 @@ const PROJECTS = [
       contexte: "Le site de la Snecma à Evry-Corbeil : le bâtiment existant, une usine et ses bureaux, est à optimiser et humaniser.",
     },
   },
-  { slug: "opera-bastille", title: "Fermeture de façade | OPERA dE PARIS | Paris 4", group: "equipements", photoCount: 4, plan: true },
+  {
+    slug: "opera-bastille", title: "Fermeture de façade | OPERA dE PARIS | Paris 4", group: "equipements", photoCount: 4,
+    plans: [{ file: "plan.jpg", label: "Plan RDC" }],
+  },
   {
     slug: "rueil", title: "Espace cinématographique | Groupe SOPIC | Rueil Malmaison", group: "equipements", photoCount: 6,
-    plans: [
-      { file: "plan.jpg", label: "Plan de situation" },
-      { file: "plan2.jpg", label: "Coupe perspective" },
-    ],
+    plans: [{ file: "plan.jpg", label: "Plan de situation" }],
     description: {
       lieu: "Rueil-Malmaison (92)",
       moe: MANDATAIRE,

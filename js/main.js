@@ -163,12 +163,12 @@ function renderProjectDetail() {
     )
     .join("");
 
-  const plans = project.plans || (project.plan ? [{ file: "plan.jpg" }] : []);
+  const plans = project.plans || [];
   const planHTML = plans
     .map(
       (pl) => `
       <figure class="project-plan-figure">
-        ${plans.length > 1 && pl.label ? `<div class="project-plan-label">${pl.label}</div>` : ""}
+        ${pl.label ? `<div class="project-plan-label">${pl.label}</div>` : ""}
         <img class="project-plan" src="assets/projects/${project.slug}/${pl.file}" alt="${project.title} — ${pl.label || "plan"}">
       </figure>`
     )
