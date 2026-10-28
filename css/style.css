@@ -417,7 +417,7 @@ body.hover-equipements .project-tile[data-group="logements"] {
   -ms-overflow-style: none;
   display: flex;
   flex-direction: column;
-  padding: 52px 32px 60px 32px;
+  padding: 90px 32px 60px 32px;
 }
 
 .project-sidebar::-webkit-scrollbar {
