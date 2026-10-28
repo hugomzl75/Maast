@@ -3,7 +3,8 @@ const CATEGORIES = [
   { key: "equipements", label: "Programmes mixtes & équipements" },
 ];
 
-const MANDATAIRE = "maast.a";
+const MANDATAIRE = "maast.a mandataire";
+const ASSOCIE = "maast.a associé";
 
 const PROJECTS = [
   // Logements
@@ -59,10 +60,7 @@ const PROJECTS = [
   },
   {
     slug: "beranger", title: "53 logements | ADOMA | Paris 3", group: "logements", photoCount: 6,
-    plans: [
-      { file: "plan2.jpg", label: "Plan RDC" },
-      { file: "plan.jpg", label: "Plan R+1" },
-    ],
+    plans: [{ file: "plan2.jpg", label: "Plan RDC" }],
     description: {
       lieu: "22 rue Béranger, Paris 3e",
       moe: MANDATAIRE,
@@ -78,7 +76,7 @@ const PROJECTS = [
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Avenue du Général-Patton / rue Louis-et-Edouard-Gérard, Crouy (02)",
-      moe: `${MANDATAIRE} (architecte associé : Pouget-Delasalle architectes)`,
+      moe: ASSOCIE,
       programme: "Reconversion de la friche urbaine Pecquet-Tesson et construction de 45 logements.",
       surface: "3 000 m² SHON",
       cout: "4 M€ HT",
@@ -136,10 +134,10 @@ const PROJECTS = [
   },
   {
     slug: "guebwiller", title: "EHPAD de 120 lits | HCC | Guebwiller", group: "equipements", photoCount: 5,
-    plans: [
-      { file: "plan.jpg", label: "Plan masse" },
-      { file: "plan2.jpg", label: "Plan R+1" },
-    ],
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
+    description: {
+      moe: ASSOCIE,
+    },
   },
   {
     slug: "zcb", title: "107 logements locatifs intermédiaires + commerces | SNI | Paris 17", group: "equipements", photoCount: 6,
@@ -156,10 +154,7 @@ const PROJECTS = [
   },
   {
     slug: "albert-thomas", title: "MAPAD de 73 lits | SAGE | Tremblay en France", group: "equipements", photoCount: 6,
-    plans: [
-      { file: "plan.jpg", label: "Plan de situation" },
-      { file: "plan2.jpg", label: "Plan RDC" },
-    ],
+    plans: [{ file: "plan.jpg", label: "Plan de situation" }],
     description: {
       lieu: "Place Albert-Thomas, Tremblay-en-France (93)",
       moe: MANDATAIRE,
@@ -198,10 +193,7 @@ const PROJECTS = [
   },
   {
     slug: "snecma", title: "Bureaux | Groupe SAFRAN | Evry Corbeil", group: "equipements", photoCount: 3,
-    plans: [
-      { file: "plan.jpg", label: "Plan masse" },
-      { file: "plan2.jpg", label: "Plan R+1" },
-    ],
+    plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Route Henri-Auguste-Desbruyères, Evry cedex (91)",
       moe: MANDATAIRE,
