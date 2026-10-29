@@ -34,10 +34,11 @@ const PROJECTS = [
   },
   {
     slug: "reginaldo", title: "43 studios | I3F | Paris 11", group: "logements", photoCount: 6,
+    cover: 2,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "51 boulevard de Belleville, Paris 11e",
-      moe: MANDATAIRE,
+      moe: `${MANDATAIRE} — BET : Beterem Ingénierie`,
       programme: "Démolition d'un foyer de travailleurs migrants de 29 logements existants et construction d'une résidence sociale de 43 logements locatifs sociaux (PLAI) pour les mêmes résidents.",
       surface: "1 345 m² SHON",
       cout: "3 M€ HT",
@@ -50,7 +51,7 @@ const PROJECTS = [
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "36 rue des Poissonniers, Paris 18e",
-      moe: MANDATAIRE,
+      moe: `${MANDATAIRE} — BET structure : Renzo de Andreis, BET fluides : CFERM`,
       programme: "Réalisation d'un ensemble immobilier de six logements sociaux locatifs (PLAI).",
       surface: "495 m² SHON",
       cout: "1,32 M€ HT",
@@ -63,7 +64,7 @@ const PROJECTS = [
     plans: [{ file: "plan2.jpg", label: "Plan RDC" }],
     description: {
       lieu: "22 rue Béranger, Paris 3e",
-      moe: MANDATAIRE,
+      moe: `${MANDATAIRE} — BET : GEC Ingénierie`,
       programme: "Restructuration d'un immeuble haussmannien avec la création de 43 logements sur rue et la construction de 10 logements sur cour.",
       surface: "2 114 m² SHON",
       cout: "2,9 M€ HT",
@@ -76,7 +77,7 @@ const PROJECTS = [
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Avenue du Général-Patton / rue Louis-et-Edouard-Gérard, Crouy (02)",
-      moe: ASSOCIE,
+      moe: `${ASSOCIE} — BET fluides et thermique : FTE`,
       programme: "Reconversion de la friche urbaine Pecquet-Tesson et construction de 45 logements.",
       surface: "3 000 m² SHON",
       cout: "4 M€ HT",
@@ -89,7 +90,7 @@ const PROJECTS = [
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "14/16 rue du Maroc, Paris 19e",
-      moe: MANDATAIRE,
+      moe: `${MANDATAIRE} — BET environnemental : Franck Boutté, BET TCE : Sechaud et Bossuyt`,
       programme: "Réalisation d'un bâtiment de 46 logements et d'un local d'activité sur 2 niveaux de sous-sol.",
       surface: "3 610 m² SHON",
       cout: "5,7 M€ HT",
@@ -111,6 +112,7 @@ const PROJECTS = [
   },
   {
     slug: "massy", title: "53 logements + crèche | Générale de Promotion | Massy", group: "equipements", photoCount: 4,
+    cover: 3,
     description: {
       lieu: "Rue Emile-Baudot, Massy (91)",
       moe: MANDATAIRE,
@@ -121,10 +123,11 @@ const PROJECTS = [
   },
   {
     slug: "jean-jaures", title: "34 logements en accession + commerces | Nexity | Clichy la Garenne", group: "equipements", photoCount: 5,
+    cover: 2,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "33 boulevard Jean-Jaurès, Clichy-la-Garenne (92)",
-      moe: MANDATAIRE,
+      moe: `${MANDATAIRE} — BET HQE : Cardonnel`,
       programme: "Réalisation de 34 logements en accession, commerces au rez-de-chaussée et parkings.",
       surface: "2 191,90 m² SHON",
       cout: "3,9 M€ HT",
@@ -133,7 +136,8 @@ const PROJECTS = [
     },
   },
   {
-    slug: "guebwiller", title: "EHPAD de 120 lits | HCC | Guebwiller", group: "equipements", photoCount: 5,
+    slug: "guebwiller", title: "EHPAD de 120 lits | HCC | Guebwiller", group: "equipements", photoCount: 4,
+    coverImage: "cover-thumb.jpg",
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       moe: ASSOCIE,
@@ -144,7 +148,7 @@ const PROJECTS = [
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "ZAC Clichy-Batignolles, lot E10A, 183 avenue de Clichy, Paris 17e",
-      moe: MANDATAIRE,
+      moe: `${MANDATAIRE} — BET : Beterem Ingénierie, BET HQE : Franck Boutté`,
       programme: "Réalisation de 107 logements BBC, commerces et parking en infrastructure.",
       surface: "1 182 m² commerces, 3 110 m² parkings, 7 533 m² SHON logements",
       cout: "16 M€ HT",
@@ -154,10 +158,11 @@ const PROJECTS = [
   },
   {
     slug: "albert-thomas", title: "MAPAD de 73 lits | SAGE | Tremblay en France", group: "equipements", photoCount: 6,
+    cover: 3,
     plans: [{ file: "plan.jpg", label: "Plan de situation" }],
     description: {
       lieu: "Place Albert-Thomas, Tremblay-en-France (93)",
-      moe: MANDATAIRE,
+      moe: `${MANDATAIRE} — BET : GEC Ingénierie`,
       programme: "Maison pour personnes âgées dépendantes (Mapad) de 73 lits, salle de restaurant, cuisine collective, locaux d'accueil, logement de fonction et locaux administratifs, parking en infrastructure.",
       surface: "3 720 m² SHON",
       cout: "4,048 M€ HT",
@@ -170,7 +175,7 @@ const PROJECTS = [
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Allée des Pléiades, La Courneuve (93)",
-      moe: MANDATAIRE,
+      moe: `${MANDATAIRE} — BET études : Coplan, BET chantier : ATEA`,
       programme: "Réalisation d'un Ehpad de 82 chambres et d'un ensemble de 27 logements sociaux avec parking en infrastructure.",
       surface: "7 760 m² SHON",
       cout: "10,43 M€ HT",
@@ -183,7 +188,7 @@ const PROJECTS = [
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "44 rue de Prony, Paris 17e",
-      moe: MANDATAIRE,
+      moe: `${MANDATAIRE} — BET études : ATEA, BET chantier : Sechaud & Bossuyt`,
       programme: "Restructuration d'un immeuble de bureaux avec recomposition de la façade sur rue.",
       surface: "1 971 m² SHON",
       cout: "2,75 M€ HT",
@@ -196,7 +201,7 @@ const PROJECTS = [
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Route Henri-Auguste-Desbruyères, Evry cedex (91)",
-      moe: MANDATAIRE,
+      moe: `${MANDATAIRE} — BET : Technip TPS`,
       programme: "Restructuration des bureaux, ateliers et vestiaires du site d'Evry-Corbeil.",
       surface: "16 000 m² de bureaux, 288 000 m² d'ateliers",
       cout: "13 M€ HT",
@@ -220,6 +225,7 @@ const PROJECTS = [
 ];
 
 function projectCover(p) {
+  if (p.coverImage) return `assets/projects/${p.slug}/${p.coverImage}`;
   const n = String(p.cover || 1).padStart(2, "0");
   return `assets/projects/${p.slug}/${n}-thumb.jpg`;
 }
