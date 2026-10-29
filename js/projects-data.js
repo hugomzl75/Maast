@@ -19,6 +19,7 @@ const PROJECTS = [
       cout: "1,4 M€ HT",
       certification: "Premier label BBCA des Hauts-de-France",
       contexte: "L'opération est située à Amiens dans la ZAC Paul-Claudel, superficie totale de 40 ha au sud de la ville, à proximité du centre-ville, et répond à la manière d'habiter à la fois dans un parc et en ville.",
+      credits: "Cécile Septet",
     },
   },
   {
@@ -30,6 +31,7 @@ const PROJECTS = [
       programme: "Restructuration de la résidence en 102 studios équipés (240 m² de surface de plancher créée sur 2 700 m²) — lauréate du Prix de la Première Œuvre 1994 du Moniteur pour la réalisation de 102 chambres réparties en 21 unités de vie.",
       surface: "2 700 m²",
       cout: "576 950 € HT",
+      credits: "maast.a",
     },
   },
   {
@@ -44,6 +46,7 @@ const PROJECTS = [
       cout: "3 M€ HT",
       certification: "BBC Effinergie / Plan Climat",
       contexte: "Le site proposé par RSI 3F est le cœur de Belleville, le Paris du quotidien, celui du tissu faubourien.",
+      credits: "Cécile Septet",
     },
   },
   {
@@ -57,6 +60,7 @@ const PROJECTS = [
       cout: "1,32 M€ HT",
       certification: "BBC / Plan Climat",
       contexte: "Quartier Château Rouge, le site proposé par la RIVP est le vieux Paris de tissu de faubourg, celui des courettes et des petits jardins aujourd'hui en pleine mutation.",
+      credits: "Cécile Septet",
     },
   },
   {
@@ -70,6 +74,7 @@ const PROJECTS = [
       cout: "2,9 M€ HT",
       certification: "Certification Qualitel THPE",
       contexte: "Un quartier du vieux Paris situé entre la rue Béranger et la place de la République.",
+      credits: "Hervé Abbadie",
     },
   },
   {
@@ -83,6 +88,7 @@ const PROJECTS = [
       cout: "4 M€ HT",
       certification: "BBC Effinergie",
       contexte: "En limite des terres agricoles et en plein cœur de la commune de Crouy, le tissu est dense et se constitue de grosses maisons de ville. Le projet s'inscrit dans le plan de reconversion de la friche urbaine Pecquet Tesson.",
+      credits: "maast.a et Pouget-Delasalle architectes",
     },
   },
   {
@@ -96,6 +102,7 @@ const PROJECTS = [
       cout: "5,7 M€ HT",
       certification: "BBC Effinergie / Plan Climat",
       contexte: "Greffé à la rue du Maroc dans un quartier hétéroclite, le bâtiment marque l'entrée d'un futur jardin public ainsi que l'aboutissement de la restructuration de l'îlot après la démolition de la tour du Maroc.",
+      credits: "Hervé Abbadie / Cécile Septet",
     },
   },
   // Programmes mixtes & équipements
@@ -133,6 +140,7 @@ const PROJECTS = [
       cout: "3,9 M€ HT",
       certification: "BBC Effinergie / Plan Climat",
       contexte: "Le site proposé par Nexity est au cœur de Clichy-la-Garenne, proche des équipements et du métro, dans un tissu de faubourg hétéroclite offrant en bon voisinage : pavillons, petits logements collectifs, commerces de proximité et bâtiments industriels de bonne facture.",
+      credits: "Christophe Valtin",
     },
   },
   {
@@ -140,7 +148,12 @@ const PROJECTS = [
     coverImage: "cover-thumb.jpg",
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
-      moe: ASSOCIE,
+      lieu: "Guebwiller (68)",
+      moe: `${ASSOCIE} - B+B Architecte associé — BET Serue Ingénierie`,
+      programme: "Construction d'un nouvel EHPAD de 120 lits et réhabilitation de la « Villa Bois Fleuri ».",
+      surface: "5 685 m²",
+      cout: "12 M€ HT",
+      contexte: "Le Centre Hospitalier de Guebwiller a acquis le site « du Bois Fleuri » à Guebwiller pour relocaliser ses activités afin de regrouper ses structures, et de les mettre aux normes. En appui administratif et logistique, les Hôpitaux Civils de Colmar ont lancé une mission de maîtrise d'œuvre pour construire un nouvel EHPAD « Bois Fleuri » de 120 lits et réhabiliter la villa historique « Bois Fleuri ». Le site, d'une superficie de 22 807 m², est en limite nord de Guebwiller, et sa topographie très contrainte est soulignée par d'importantes masses boisées. La villa, à l'architecture remarquable et construite en 1850, fait partie intégrante du projet.",
     },
   },
   {
@@ -154,6 +167,7 @@ const PROJECTS = [
       cout: "16 M€ HT",
       certification: "BBC Effinergie / Plan Climat",
       contexte: "L'îlot E.10.A met en tension l'avenue de Clichy et l'entrée nord du parc Martin Luther King, faisant lien entre la ville existante et le morceau de ville en devenir.",
+      credits: "Hervé Abbadie / Cécile Septet / Frédéric Delangle",
     },
   },
   {
@@ -168,6 +182,7 @@ const PROJECTS = [
       cout: "4,048 M€ HT",
       certification: "Certification Qualitel THPE",
       contexte: "La Mapad donne sur la place Albert Thomas ouverte dans un quartier pavillonnaire de proximité : le quartier du Vert Galant.",
+      credits: "Hervé Abbadie",
     },
   },
   {
@@ -181,6 +196,7 @@ const PROJECTS = [
       cout: "10,43 M€ HT",
       certification: "Certification Qualitel THPE",
       contexte: "Le bâtiment est situé dans le quartier de la gare en pleine restructuration. Il est mitoyen du bâtiment des Pléiades construit dans les années 70.",
+      credits: "Hervé Abbadie",
     },
   },
   {
@@ -194,6 +210,7 @@ const PROJECTS = [
       cout: "2,75 M€ HT",
       certification: "Démarche Qualitel THPE",
       contexte: "Situé dans un quartier d'architecture haussmannienne, à proximité du parc Monceau, le bâtiment retrouve la partition classique de la rue à travers une nouvelle façade en double peau de verre tramé verticalement.",
+      credits: "Hervé Abbadie",
     },
   },
   {
@@ -207,19 +224,26 @@ const PROJECTS = [
       cout: "13 M€ HT",
       certification: "Démarche Qualitel THPE",
       contexte: "Le site de la Snecma à Evry-Corbeil : le bâtiment existant, une usine et ses bureaux, est à optimiser et humaniser.",
+      credits: "Hervé Abbadie",
     },
   },
   {
     slug: "opera-bastille", title: "Fermeture de façade | OPERA dE PARIS | Paris 4", group: "equipements", photoCount: 4,
     plans: [{ file: "plan.jpg", label: "Plan RDC" }],
+    creditsLabel: "crédits images",
+    description: {
+      credits: "Arnaud Hapi / ON",
+    },
   },
   {
     slug: "rueil", title: "Espace cinématographique | Groupe SOPIC | Rueil Malmaison", group: "equipements", photoCount: 6,
     plans: [{ file: "plan.jpg", label: "Plan de situation" }],
+    creditsLabel: "crédits images",
     description: {
       lieu: "Rueil-Malmaison (92)",
       moe: MANDATAIRE,
       programme: "Inventons la Métropole du Grand Paris « La Lanterne » — construction d'un espace cinématographique, d'une halle gourmande, de salles de sport et d'une terrasse agricole. Concours en 2017.",
+      credits: "Artefactory",
     },
   },
 ];

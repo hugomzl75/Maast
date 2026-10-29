@@ -151,6 +151,7 @@ function renderProjectDetail() {
     { key: "cout", heading: "coût de construction" },
     { key: "certification", heading: "certification environnementale" },
     { key: "contexte", heading: "contexte" },
+    { key: "credits", heading: project.creditsLabel || "crédits photos" },
   ];
   const descriptionHTML = DESCRIPTION_FIELDS
     .filter((field) => project.description && project.description[field.key])
