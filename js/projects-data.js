@@ -49,7 +49,8 @@ const PROJECTS = [
     },
   },
   {
-    slug: "poissonniers", title: "6 logements sociaux | RIVP | Paris 18", group: "logements", photoCount: 5,
+    slug: "poissonniers", title: "6 logements sociaux | RIVP | Paris 18", group: "logements", photoCount: 8,
+    cover: 2,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "36 rue des Poissonniers, Paris 18e",
@@ -63,7 +64,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "beranger", title: "53 logements | ADOMA | Paris 3", group: "logements", photoCount: 6,
+    slug: "beranger", title: "53 logements | ADOMA | Paris 3", group: "logements", photoCount: 7,
     plans: [{ file: "plan2.jpg", label: "Plan RDC" }],
     description: {
       lieu: "22 rue Béranger, Paris 3e",
@@ -77,7 +78,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "crouy", title: "45 logements | OPAL | Crouy", group: "logements", photoCount: 7,
+    slug: "crouy", title: "45 logements | OPAL | Crouy", group: "logements", photoCount: 8,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Avenue du Général-Patton / rue Louis-et-Edouard-Gérard, Crouy (02)",
@@ -91,7 +92,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "maroc", title: "46 logements sociaux | Paris Habitat | Paris 19", group: "logements", photoCount: 4,
+    slug: "maroc", title: "46 logements sociaux | Paris Habitat | Paris 19", group: "logements", photoCount: 10,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "14/16 rue du Maroc, Paris 19e",
@@ -117,8 +118,8 @@ const PROJECTS = [
     },
   },
   {
-    slug: "massy", title: "53 logements + crèche | Générale de Promotion | Massy", group: "equipements", photoCount: 4,
-    cover: 3,
+    slug: "massy", title: "53 logements + crèche | Générale de Promotion | Massy", group: "equipements", photoCount: 8,
+    cover: 2,
     description: {
       lieu: "Rue Emile-Baudot, Massy (91)",
       moe: MANDATAIRE,
@@ -128,7 +129,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "jean-jaures", title: "34 logements en accession + commerces | Nexity | Clichy la Garenne", group: "equipements", photoCount: 5,
+    slug: "jean-jaures", title: "34 logements en accession + commerces | Nexity | Clichy la Garenne", group: "equipements", photoCount: 8,
     cover: 2,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
@@ -170,7 +171,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "albert-thomas", title: "MAPAD de 73 lits | SAGE | Tremblay en France", group: "equipements", photoCount: 6,
+    slug: "albert-thomas", title: "MAPAD de 73 lits | SAGE | Tremblay en France", group: "equipements", photoCount: 5,
     cover: 3,
     plans: [{ file: "plan.jpg", label: "Plan de situation" }],
     description: {
@@ -185,7 +186,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "jean-viollet", title: "EHPAD de 82 lits + 27 logements | SAHLM du Moulin Vert | la Courneuve", group: "equipements", photoCount: 5,
+    slug: "jean-viollet", title: "EHPAD de 82 lits + 27 logements | SAHLM du Moulin Vert | la Courneuve", group: "equipements", photoCount: 7,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Allée des Pléiades, La Courneuve (93)",
@@ -199,7 +200,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "prony", title: "Bureaux | Groupe MEDERIC | Paris 17", group: "equipements", photoCount: 3,
+    slug: "prony", title: "Bureaux | Groupe MEDERIC | Paris 17", group: "equipements", photoCount: 6,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "44 rue de Prony, Paris 17e",
@@ -213,7 +214,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "snecma", title: "Bureaux | Groupe SAFRAN | Evry Corbeil", group: "equipements", photoCount: 3,
+    slug: "snecma", title: "Bureaux | Groupe SAFRAN | Evry Corbeil", group: "equipements", photoCount: 7,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Route Henri-Auguste-Desbruyères, Evry cedex (91)",
