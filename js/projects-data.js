@@ -4,7 +4,6 @@ const CATEGORIES = [
 ];
 
 const MANDATAIRE = "maast.a mandataire";
-const ASSOCIE = "maast.a associé";
 
 const PROJECTS = [
   // Logements
@@ -82,7 +81,7 @@ const PROJECTS = [
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Avenue du Général-Patton / rue Louis-et-Edouard-Gérard, Crouy (02)",
-      moe: `${ASSOCIE} — BET fluides et thermique : FTE`,
+      moe: "maast.a, associé à Pouget-Delasalle architectes, mandataire — BET fluides et thermique : FTE",
       programme: "Reconversion de la friche urbaine Pecquet-Tesson et construction de 45 logements.",
       surface: "3 000 m² SHON",
       cout: "4 M€ HT",
@@ -149,7 +148,7 @@ const PROJECTS = [
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Guebwiller (68)",
-      moe: `${ASSOCIE} - B+B Architecte associé — BET Serue Ingénierie`,
+      moe: "maast.a, associé à B+B architectes, mandataire — BET Serue Ingénierie",
       programme: "Construction d'un nouvel EHPAD de 120 lits et réhabilitation de la « Villa Bois Fleuri ».",
       surface: "5 685 m²",
       cout: "12 M€ HT",
