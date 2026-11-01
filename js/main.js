@@ -113,18 +113,18 @@ function renderProjectsGrid() {
   el.innerHTML = CATEGORIES.map((cat) => {
     const items = PROJECTS.filter((p) => p.group === cat.key);
     return `
-      <section class="project-group">
-        <h2 class="category-label" data-group="${cat.key}">${cat.label}</h2>
+      <section class="project-group" data-group="${cat.key}">
+        <h2 class="category-label">${cat.label}</h2>
         <div class="projects-grid">
           ${items.map((p) => cardHTML(p)).join("")}
         </div>
       </section>`;
   }).join("");
 
-  document.querySelectorAll(".category-label").forEach((label) => {
-    const group = label.dataset.group;
-    label.addEventListener("mouseenter", () => document.body.classList.add(`hover-${group}`));
-    label.addEventListener("mouseleave", () => document.body.classList.remove(`hover-${group}`));
+  document.querySelectorAll(".project-group").forEach((group) => {
+    const key = group.dataset.group;
+    group.addEventListener("mouseenter", () => document.body.classList.add(`hover-${key}`));
+    group.addEventListener("mouseleave", () => document.body.classList.remove(`hover-${key}`));
   });
 }
 
