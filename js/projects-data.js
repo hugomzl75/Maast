@@ -35,7 +35,7 @@ const PROJECTS = [
   },
   {
     slug: "reginaldo", title: "43 studios | I3F | Paris 11", group: "logements", photoCount: 6,
-    cover: 2,
+    cover: 3,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "51 boulevard de Belleville, Paris 11e",
@@ -93,6 +93,7 @@ const PROJECTS = [
   },
   {
     slug: "maroc", title: "46 logements sociaux | Paris Habitat | Paris 19", group: "logements", photoCount: 10,
+    cover: 4,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "14/16 rue du Maroc, Paris 19e",
@@ -108,6 +109,7 @@ const PROJECTS = [
   // Programmes mixtes & équipements
   {
     slug: "vaucouleurs", title: "152 logements + commerces | Paris Habitat | Paris 11", group: "equipements", photoCount: 3,
+    cover: 2,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Rues de Vaucouleurs, de la Fontaine-aux-Rois, de l'Orillon et du Moulin-Joly, Paris 11e",
@@ -145,7 +147,7 @@ const PROJECTS = [
   },
   {
     slug: "guebwiller", title: "EHPAD de 120 lits | HCC | Guebwiller", group: "equipements", photoCount: 4,
-    coverImage: "cover-thumb.jpg",
+    cover: 2,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Guebwiller (68)",
@@ -237,6 +239,7 @@ const PROJECTS = [
   },
   {
     slug: "rueil", title: "Espace cinématographique | Groupe SOPIC | Rueil Malmaison", group: "equipements", photoCount: 6,
+    cover: 2,
     plans: [{ file: "plan.jpg", label: "Plan de situation" }],
     creditsLabel: "crédits images",
     description: {
