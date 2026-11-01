@@ -93,7 +93,7 @@ const PROJECTS = [
   },
   {
     slug: "maroc", title: "46 logements sociaux | Paris Habitat | Paris 19", group: "logements", photoCount: 10,
-    cover: 4,
+    coverImage: "cover-thumb.jpg",
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "14/16 rue du Maroc, Paris 19e",
@@ -108,12 +108,11 @@ const PROJECTS = [
   },
   // Programmes mixtes & équipements
   {
-    slug: "vaucouleurs", title: "152 logements + commerces | Paris Habitat | Paris 11", group: "equipements", photoCount: 3,
-    cover: 2,
+    slug: "vaucouleurs", title: "158 logements + commerces | Paris Habitat | Paris 11", group: "equipements", photoCount: 4,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Rues de Vaucouleurs, de la Fontaine-aux-Rois, de l'Orillon et du Moulin-Joly, Paris 11e",
-      moe: MANDATAIRE,
+      moe: `${MANDATAIRE} — BET études : TPF Ingénierie, BET chantier : COTEC Ingénierie`,
       programme: "Opération de réhabilitation de logements rues de Vaucouleurs, de la Fontaine aux Rois, de l'Orillon et du Moulin Joly.",
       surface: "12 770 m²",
       cout: "4,3 M€ HT",
@@ -159,7 +158,7 @@ const PROJECTS = [
     },
   },
   {
-    slug: "zcb", title: "107 logements locatifs intermédiaires + commerces | SNI | Paris 17", group: "equipements", photoCount: 6,
+    slug: "zcb", title: "107 logements locatifs intermédiaires + commerces | SNI | Paris 17", group: "equipements", photoCount: 5,
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "ZAC Clichy-Batignolles, lot E10A, 183 avenue de Clichy, Paris 17e",
@@ -203,6 +202,7 @@ const PROJECTS = [
   },
   {
     slug: "prony", title: "Bureaux | Groupe MEDERIC | Paris 17", group: "equipements", photoCount: 6,
+    coverImage: "cover-thumb.jpg",
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "44 rue de Prony, Paris 17e",
@@ -220,7 +220,7 @@ const PROJECTS = [
     plans: [{ file: "plan.jpg", label: "Plan masse" }],
     description: {
       lieu: "Route Henri-Auguste-Desbruyères, Evry cedex (91)",
-      moe: `${MANDATAIRE} — BET : Technip TPS`,
+      moe: "maast.a, co-traitant — BET Technip TPS, mandataire",
       programme: "Restructuration des bureaux, ateliers et vestiaires du site d'Evry-Corbeil.",
       surface: "16 000 m² de bureaux, 288 000 m² d'ateliers",
       cout: "13 M€ HT",
