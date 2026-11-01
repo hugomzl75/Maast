@@ -174,7 +174,7 @@ const PROJECTS = [
   {
     slug: "albert-thomas", title: "MAPAD de 73 lits | SAGE | Tremblay en France", group: "equipements", photoCount: 5,
     cover: 3,
-    plans: [{ file: "plan.jpg", label: "Plan de situation" }],
+    plans: [{ file: "plan.jpg", label: "Plan de situation" }, { file: "plan2.jpg", label: "Plan masse" }],
     description: {
       lieu: "Place Albert-Thomas, Tremblay-en-France (93)",
       moe: `${MANDATAIRE} — BET : GEC Ingénierie`,
